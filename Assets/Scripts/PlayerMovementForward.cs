@@ -24,10 +24,11 @@ public class PlayerMovementForward : MonoBehaviour
     public float maxRotateSpeed;
 
     public float bounceDist;
-
-
+    bool moveCommitted = false;
+    public float minimumMoveSeconds;
 
     public Vector3 previousPosition;
+    public float followDistance;
 
 
     public GameObject inFrontSkeleton;
@@ -42,59 +43,81 @@ public class PlayerMovementForward : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.inputString != null)
-        {
-            Debug.Log(Input.inputString);
-        }
         StartCoroutine(RecordPositionLater());
-
         if (positionInLine == 0)
         {
-            if (Input.GetAxis("Horizontal") > 0)
+            if(!moveCommitted)
             {
-                transform.Rotate(0, rotateSpeed * Time.deltaTime, 0);
-                transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
-                checkBounce();
-               // increaseSpeedOnConstantSpin(2);
+                if (Input.GetAxis("Horizontal") > 0)
+                {
+                    moveCommitted = true;
+                    StartCoroutine(MoveMinimum( MoveScale.Positive));
+                    // increaseSpeedOnConstantSpin(2);
 
-            }
-            else if (Input.GetAxis("Horizontal") < 0)
-            {
-                transform.Rotate(0, -rotateSpeed * Time.deltaTime, 0);
-                transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
-                checkBounce();
-                //  increaseSpeedOnConstantSpin(1);
+                }
+                else if (Input.GetAxis("Horizontal") < 0)
+                {
+                    moveCommitted = true;
+                    StartCoroutine(MoveMinimum(MoveScale.Negative));
+                    //  increaseSpeedOnConstantSpin(1);
 
-            }
-            else
-            {
-               // increaseSpeedOnConstantSpin(0);
+                }
             }
 
            // Debug.Log(previousPosition);
         }
 
-        if (positionInLine != 0)
+        if (positionInLine != 0 && inFrontSkeleton != null)
         {
-            if (inFrontSkeleton != null)
+
+            if (Vector3.Distance(inFrontSkeleton.transform.position, transform.position) > 2f)
             {
-                if (Input.GetAxis("Horizontal") != 0)
-                {
-                  //  transform.LookAt(inFrontSkeleton.GetComponent<PlayerMovementForward>().previousPosition);
-                    transform.LookAt(inFrontSkeleton.transform.position);
 
-                    //Was trting some stuff... ignore the 'dist' stuff for now
+                //  transform.LookAt(inFrontSkeleton.GetComponent<PlayerMovementForward>().previousPosition);
+                transform.LookAt(inFrontSkeleton.transform.position);
 
-                    //float dist = Vector3.Distance(transform.position, inFrontSkeleton.transform.position);
-                    //print("Distance to other: " + dist);
+                //Was trting some stuff... ignore the 'dist' stuff for now
+
+                //float dist = Vector3.Distance(transform.position, inFrontSkeleton.transform.position);
+                //print("Distance to other: " + dist);
 
 
                     
-                        transform.Translate(Vector3.forward * (moveSpeed * Time.deltaTime));
-                }
+                    transform.Translate(Vector3.forward * (moveSpeed * Time.deltaTime));
             }
         }
 
+    }
+
+    private enum MoveScale { Positive, Negative, }
+
+    IEnumerator MoveMinimum(MoveScale moveScale)
+    {
+        float start = Time.time;
+        float end = Time.time + minimumMoveSeconds;
+        while (Time.time < end)
+        {
+            switch (moveScale) {
+                case MoveScale.Positive:
+                    transform.Rotate(0, rotateSpeed * Time.deltaTime, 0);
+                    transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+                    checkBounce();
+                    break;
+                case MoveScale.Negative:
+                    transform.Rotate(0, -rotateSpeed * Time.deltaTime, 0);
+                    transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+                    checkBounce();
+                    break;
+                default:
+                    break;
+            }
+            yield return null;
+        }
+        while(Input.GetAxis("Horizontal") == 1 || Input.GetAxis("Horizontal") == -1)
+        {
+            yield return null;
+        }
+        moveCommitted = false;
     }
 
     void checkBounce()
@@ -109,7 +132,6 @@ public class PlayerMovementForward : MonoBehaviour
     Vector3 Bounce()
     {
         RaycastHit hit;
-        Ray ray = new Ray();
         if (Physics.Raycast(transform.position, transform.forward, out hit, bounceDist))
         {
             Vector3 incomingVector = hit.point - transform.position;
