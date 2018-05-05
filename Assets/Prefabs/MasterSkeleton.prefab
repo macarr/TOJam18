@@ -381,7 +381,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1820543627619044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8373872, y: 0.101389766, z: 1.3049536}
+  m_LocalPosition: {x: -0.5381192, y: 0.101389825, z: 2.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4568547038230008}
@@ -1311,13 +1311,13 @@ MonoBehaviour:
   directionSprites4:
   - {fileID: 21300000, guid: 154c6ed883a5cff4286c713bd4f2c9e8, type: 3}
   - {fileID: 21300000, guid: 2679722325b8d5041b87bf03fe5f87fd, type: 3}
-  - {fileID: 21300000, guid: 23a9c534641b9e5408c62d97d90ec8b1, type: 3}
+  - {fileID: 21300000, guid: 7f516708f19fb7c4581d07a57622e3ef, type: 3}
   - {fileID: 21300000, guid: e541e2db6450a2043ad322e8018c09ab, type: 3}
   - {fileID: 21300000, guid: 9783bce00cd45ff44a9ebb411e10608e, type: 3}
   - {fileID: 21300000, guid: c47dba87f50ed16418cede39bd00ea31, type: 3}
-  - {fileID: 21300000, guid: 7f516708f19fb7c4581d07a57622e3ef, type: 3}
+  - {fileID: 21300000, guid: 23a9c534641b9e5408c62d97d90ec8b1, type: 3}
   - {fileID: 21300000, guid: 6a92d21f43ec23b448b09c9c082bd58c, type: 3}
-  animCycleCounter: 0
+  animCycleCounter: 0.75
   animCycleInterval: 0.15
 --- !u!114 &114007513314488116
 MonoBehaviour:
@@ -1374,13 +1374,13 @@ MonoBehaviour:
   directionSprites4:
   - {fileID: 21300000, guid: 154c6ed883a5cff4286c713bd4f2c9e8, type: 3}
   - {fileID: 21300000, guid: 2679722325b8d5041b87bf03fe5f87fd, type: 3}
-  - {fileID: 21300000, guid: 23a9c534641b9e5408c62d97d90ec8b1, type: 3}
+  - {fileID: 21300000, guid: 7f516708f19fb7c4581d07a57622e3ef, type: 3}
   - {fileID: 21300000, guid: e541e2db6450a2043ad322e8018c09ab, type: 3}
   - {fileID: 21300000, guid: 9783bce00cd45ff44a9ebb411e10608e, type: 3}
   - {fileID: 21300000, guid: c47dba87f50ed16418cede39bd00ea31, type: 3}
-  - {fileID: 21300000, guid: 7f516708f19fb7c4581d07a57622e3ef, type: 3}
+  - {fileID: 21300000, guid: 23a9c534641b9e5408c62d97d90ec8b1, type: 3}
   - {fileID: 21300000, guid: 6a92d21f43ec23b448b09c9c082bd58c, type: 3}
-  animCycleCounter: 0
+  animCycleCounter: 0.45
   animCycleInterval: 0.15
 --- !u!114 &114029363616199282
 MonoBehaviour:
@@ -1424,13 +1424,13 @@ MonoBehaviour:
   directionSprites4:
   - {fileID: 21300000, guid: 154c6ed883a5cff4286c713bd4f2c9e8, type: 3}
   - {fileID: 21300000, guid: 2679722325b8d5041b87bf03fe5f87fd, type: 3}
-  - {fileID: 21300000, guid: 23a9c534641b9e5408c62d97d90ec8b1, type: 3}
+  - {fileID: 21300000, guid: 7f516708f19fb7c4581d07a57622e3ef, type: 3}
   - {fileID: 21300000, guid: e541e2db6450a2043ad322e8018c09ab, type: 3}
   - {fileID: 21300000, guid: 9783bce00cd45ff44a9ebb411e10608e, type: 3}
   - {fileID: 21300000, guid: c47dba87f50ed16418cede39bd00ea31, type: 3}
-  - {fileID: 21300000, guid: 7f516708f19fb7c4581d07a57622e3ef, type: 3}
+  - {fileID: 21300000, guid: 23a9c534641b9e5408c62d97d90ec8b1, type: 3}
   - {fileID: 21300000, guid: 6a92d21f43ec23b448b09c9c082bd58c, type: 3}
-  animCycleCounter: 0
+  animCycleCounter: 0.6
   animCycleInterval: 0.15
 --- !u!114 &114077855135981546
 MonoBehaviour:
@@ -1469,7 +1469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bobTween: 0
-  bobSpeed: 0.6
+  bobSpeed: 0.1
   offset: 0.8
   goingUp: 0
 --- !u!114 &114104711667282216
@@ -1581,13 +1581,13 @@ MonoBehaviour:
   directionSprites4:
   - {fileID: 21300000, guid: 154c6ed883a5cff4286c713bd4f2c9e8, type: 3}
   - {fileID: 21300000, guid: 2679722325b8d5041b87bf03fe5f87fd, type: 3}
-  - {fileID: 21300000, guid: 23a9c534641b9e5408c62d97d90ec8b1, type: 3}
+  - {fileID: 21300000, guid: 7f516708f19fb7c4581d07a57622e3ef, type: 3}
   - {fileID: 21300000, guid: e541e2db6450a2043ad322e8018c09ab, type: 3}
   - {fileID: 21300000, guid: 9783bce00cd45ff44a9ebb411e10608e, type: 3}
   - {fileID: 21300000, guid: c47dba87f50ed16418cede39bd00ea31, type: 3}
-  - {fileID: 21300000, guid: 7f516708f19fb7c4581d07a57622e3ef, type: 3}
+  - {fileID: 21300000, guid: 23a9c534641b9e5408c62d97d90ec8b1, type: 3}
   - {fileID: 21300000, guid: 6a92d21f43ec23b448b09c9c082bd58c, type: 3}
-  animCycleCounter: 0
+  animCycleCounter: 0.15
   animCycleInterval: 0.15
 --- !u!114 &114366893483166370
 MonoBehaviour:
@@ -1714,7 +1714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8545d3264b907fc4f8ec38aa18617574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bobTween: 0.45
+  bobTween: 0
   bobSpeed: 0.1
   offset: 0.6
   goingUp: 0
@@ -1800,11 +1800,11 @@ MonoBehaviour:
   directionSprites4:
   - {fileID: 21300000, guid: 154c6ed883a5cff4286c713bd4f2c9e8, type: 3}
   - {fileID: 21300000, guid: 2679722325b8d5041b87bf03fe5f87fd, type: 3}
-  - {fileID: 21300000, guid: 23a9c534641b9e5408c62d97d90ec8b1, type: 3}
+  - {fileID: 21300000, guid: 7f516708f19fb7c4581d07a57622e3ef, type: 3}
   - {fileID: 21300000, guid: e541e2db6450a2043ad322e8018c09ab, type: 3}
   - {fileID: 21300000, guid: 9783bce00cd45ff44a9ebb411e10608e, type: 3}
   - {fileID: 21300000, guid: c47dba87f50ed16418cede39bd00ea31, type: 3}
-  - {fileID: 21300000, guid: 7f516708f19fb7c4581d07a57622e3ef, type: 3}
+  - {fileID: 21300000, guid: 23a9c534641b9e5408c62d97d90ec8b1, type: 3}
   - {fileID: 21300000, guid: 6a92d21f43ec23b448b09c9c082bd58c, type: 3}
   animCycleCounter: 0
   animCycleInterval: 0.15
@@ -1878,13 +1878,13 @@ MonoBehaviour:
   directionSprites4:
   - {fileID: 21300000, guid: 154c6ed883a5cff4286c713bd4f2c9e8, type: 3}
   - {fileID: 21300000, guid: 2679722325b8d5041b87bf03fe5f87fd, type: 3}
-  - {fileID: 21300000, guid: 23a9c534641b9e5408c62d97d90ec8b1, type: 3}
+  - {fileID: 21300000, guid: 7f516708f19fb7c4581d07a57622e3ef, type: 3}
   - {fileID: 21300000, guid: e541e2db6450a2043ad322e8018c09ab, type: 3}
   - {fileID: 21300000, guid: 9783bce00cd45ff44a9ebb411e10608e, type: 3}
   - {fileID: 21300000, guid: c47dba87f50ed16418cede39bd00ea31, type: 3}
-  - {fileID: 21300000, guid: 7f516708f19fb7c4581d07a57622e3ef, type: 3}
+  - {fileID: 21300000, guid: 23a9c534641b9e5408c62d97d90ec8b1, type: 3}
   - {fileID: 21300000, guid: 6a92d21f43ec23b448b09c9c082bd58c, type: 3}
-  animCycleCounter: 0
+  animCycleCounter: 0.3
   animCycleInterval: 0.15
 --- !u!114 &114764465852854632
 MonoBehaviour:
@@ -1923,7 +1923,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bobTween: 0
-  bobSpeed: 0.75
+  bobSpeed: 0.1
   offset: 0.8
   goingUp: 0
 --- !u!114 &114797667156828556
