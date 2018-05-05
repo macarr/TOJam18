@@ -9,11 +9,10 @@ public class LevelManager : MonoBehaviour {
     private int currentLevel = 0;
     private string[] levelOrder = new string[]
     {
-        Constants.StartScreen,
         Constants.LevelOne,
         Constants.LevelTwo,
         Constants.LevelThree,
-        Constants.EndGameScreen,
+        Constants.EndGame,
     };
 
     void Awake()

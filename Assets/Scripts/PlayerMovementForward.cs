@@ -6,8 +6,6 @@ using UnityEngine;
 public class PlayerMovementForward : MonoBehaviour
 {
 
-    public int positionInLine;
-
     public int previousDirection;
     //0 = no input
     //1 = left
@@ -44,14 +42,12 @@ public class PlayerMovementForward : MonoBehaviour
         {
             if (Input.GetAxis("Horizontal") > 0.8)
             {
-                Debug.Log("Right");
                 directionCommitted = true;
                 StartCoroutine(DoMovement(MoveScale.Positive));
                 // increaseSpeedOnConstantSpin(2);
             }
             else if (Input.GetAxis("Horizontal") < -0.8)
             {
-                Debug.Log("Left");
                 directionCommitted = true;
                 StartCoroutine(DoMovement(MoveScale.Negative));
                 //  increaseSpeedOnConstantSpin(1);
@@ -119,7 +115,6 @@ public class PlayerMovementForward : MonoBehaviour
                 HandleFollowerMovement();
             yield return null;
         }
-        Debug.Log("Finished doMovement");
         directionCommitted = false;
     }
 
