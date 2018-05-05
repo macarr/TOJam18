@@ -64,7 +64,7 @@ public class ControlDialogue : MonoBehaviour {
 
         if (Input.anyKeyDown)
         {
-            newDialogue("bonefred2", "Boneburt, no!");
+            newDialogue("Bonesly", "Boneburt, no!");
         }
 
         updateDialogue();
@@ -104,7 +104,18 @@ public class ControlDialogue : MonoBehaviour {
                 dialogueIndex++;
 
                 spriteIndex++;
-                GameObject.Find("SkullSprite").GetComponent<Image>().sprite = character1Sprites[spriteIndex % character1Sprites.Length];
+
+                if (characterName.Contains("Bonesly"))
+                {
+                    GameObject.Find("SkullSprite").GetComponent<Image>().sprite = character1Sprites[spriteIndex % character2Sprites.Length];
+                }
+                else
+                {
+                    GameObject.Find("SkullSprite").GetComponent<Image>().sprite = character1Sprites[spriteIndex % character1Sprites.Length];
+                }
+
+                //GameObject.Find("SkullSprite").GetComponent<RectTransform>().rotation.SetEulerRotation(0,0,90);
+
                 //imageRef.sprite = character1Sprites[1];
 
                 updateTimer -= updateInterval;
