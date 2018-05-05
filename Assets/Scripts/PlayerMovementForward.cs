@@ -42,12 +42,15 @@ public class PlayerMovementForward : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(Input.inputString != null)
+        {
+            Debug.Log(Input.inputString);
+        }
         StartCoroutine(RecordPositionLater());
 
         if (positionInLine == 0)
         {
-            if (Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetAxis("Horizontal") > 0)
             {
                 transform.Rotate(0, rotateSpeed * Time.deltaTime, 0);
                 transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
@@ -55,7 +58,7 @@ public class PlayerMovementForward : MonoBehaviour
                // increaseSpeedOnConstantSpin(2);
 
             }
-            else if (Input.GetKey(KeyCode.LeftArrow))
+            else if (Input.GetAxis("Horizontal") < 0)
             {
                 transform.Rotate(0, -rotateSpeed * Time.deltaTime, 0);
                 transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
@@ -75,7 +78,7 @@ public class PlayerMovementForward : MonoBehaviour
         {
             if (inFrontSkeleton != null)
             {
-                if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
+                if (Input.GetAxis("Horizontal") != 0)
                 {
                   //  transform.LookAt(inFrontSkeleton.GetComponent<PlayerMovementForward>().previousPosition);
                     transform.LookAt(inFrontSkeleton.transform.position);
