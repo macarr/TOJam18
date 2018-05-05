@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 114528943020544654}
   - component: {fileID: 114172971019668600}
   - component: {fileID: 114744663497186690}
+  - component: {fileID: 81629640537379562}
+  - component: {fileID: 82297603583197026}
   m_Layer: 5
   m_Name: CanvasPrefab
   m_TagString: Untagged
@@ -130,6 +132,93 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!81 &81629640537379562
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1271484699671076}
+  m_Enabled: 1
+--- !u!82 &82297603583197026
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1271484699671076}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c748e3d812402264ab83235f9791b083, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114172971019668600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -275,7 +364,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 8c88b27f22731a843981ef337f178bf6, type: 3}
-    m_FontSize: 30
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -310,7 +399,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 209f683a452731b458b3cc29ee18a7a3, type: 3}
   - {fileID: 21300000, guid: ebfa3229f6aa6f54b93df7f01a3298d9, type: 3}
   - {fileID: 21300000, guid: e541e2db6450a2043ad322e8018c09ab, type: 3}
-  character2Sprites: []
+  character2Sprites:
+  - {fileID: 21300000, guid: 7edd742baf46abe45a82695fae06ccf1, type: 3}
+  - {fileID: 21300000, guid: 7edd742baf46abe45a82695fae06ccf1, type: 3}
+  - {fileID: 21300000, guid: 7edd742baf46abe45a82695fae06ccf1, type: 3}
+  - {fileID: 21300000, guid: 7edd742baf46abe45a82695fae06ccf1, type: 3}
   character3Sprites: []
   character4Sprites: []
   character5Sprites: []
@@ -338,7 +431,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 3a9492d1f9a7a8944804456e32889268, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c4c9a6b8ab763e44db85587bd153c356, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -471,7 +564,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -207.3, y: -168.40001}
+  m_AnchoredPosition: {x: -207.3, y: -172.9}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224699178631186476

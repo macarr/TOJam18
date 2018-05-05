@@ -11,6 +11,7 @@ public class ControlDialogue : MonoBehaviour {
 
     public string characterName;
 
+
     public GameObject nameField;
     public GameObject textField;
     public GameObject master;
@@ -62,17 +63,20 @@ public class ControlDialogue : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (Input.anyKeyDown)
+       /*
+         if (Input.anyKeyDown)
         {
-            newDialogue("Bonesly", "Boneburt, no!");
+            newDialogue("bonefred", "Boneburt, no!");
         }
+       */
 
         updateDialogue();
 		
 	}
 
-    void newDialogue(string newCharacter, string newText)
+    public void newDialogue(string newCharacter, string newText)
     {
+
         master.SetActive(true);
 
         dialogueIndex = 0;
@@ -100,14 +104,21 @@ public class ControlDialogue : MonoBehaviour {
             if (dialogueIndex < upcomingText.Length)
             {
                 currentText += upcomingText[dialogueIndex];
+
+                if (upcomingText[dialogueIndex]!= ' ' && upcomingText[dialogueIndex] != ',' 
+                    && upcomingText[dialogueIndex] != '.' && upcomingText[dialogueIndex] != '.')
+                    GetComponent<AudioSource>().Play();
+
                 txtRefBody.text = currentText;
                 dialogueIndex++;
 
                 spriteIndex++;
 
+               
+
                 if (characterName.Contains("Bonesly"))
                 {
-                    GameObject.Find("SkullSprite").GetComponent<Image>().sprite = character1Sprites[spriteIndex % character2Sprites.Length];
+                    GameObject.Find("SkullSprite").GetComponent<Image>().sprite = character2Sprites[spriteIndex % character2Sprites.Length];
                 }
                 else
                 {
@@ -120,7 +131,7 @@ public class ControlDialogue : MonoBehaviour {
 
                 updateTimer -= updateInterval;
             }
-            else if (updateTimer >= updateInterval*15)
+            else if (updateTimer >= (updateInterval*15 + 5.0f))
             {
                 master.SetActive(false);
             }
