@@ -18,7 +18,7 @@ public class AssignSpriteBasedOnDirectoin : MonoBehaviour {
 	void Update () {
 
         if (associatedSkeleton.GetComponent<PlayerMovementForward>().positionInLine == 0)
-         Debug.Log(associatedSkeleton.GetComponent<DetermineDirection>().direction + " , " + directionSprites[associatedSkeleton.GetComponent<DetermineDirection>().direction]);
+         //Debug.Log(associatedSkeleton.GetComponent<DetermineDirection>().direction + " , " + directionSprites[associatedSkeleton.GetComponent<DetermineDirection>().direction]);
 
         if (associatedSkeleton != null)
         {

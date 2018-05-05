@@ -23,6 +23,8 @@ public class PlayerMovementForward : MonoBehaviour
     public float baseRotateSpeed;
     public float maxRotateSpeed;
 
+    public float bounceDist;
+
 
 
     public Vector3 previousPosition;
@@ -49,6 +51,7 @@ public class PlayerMovementForward : MonoBehaviour
             {
                 transform.Rotate(0, rotateSpeed * Time.deltaTime, 0);
                 transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+                checkBounce();
                // increaseSpeedOnConstantSpin(2);
 
             }
@@ -56,7 +59,8 @@ public class PlayerMovementForward : MonoBehaviour
             {
                 transform.Rotate(0, -rotateSpeed * Time.deltaTime, 0);
                 transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
-              //  increaseSpeedOnConstantSpin(1);
+                checkBounce();
+                //  increaseSpeedOnConstantSpin(1);
 
             }
             else
@@ -88,6 +92,30 @@ public class PlayerMovementForward : MonoBehaviour
             }
         }
 
+    }
+
+    void checkBounce()
+    {
+        Vector3 bounceVector = Bounce();
+        if(bounceVector != Vector3.zero)
+        {
+            transform.rotation = Quaternion.FromToRotation(transform.right, bounceVector);
+        }
+    }
+
+    Vector3 Bounce()
+    {
+        RaycastHit hit;
+        Ray ray = new Ray();
+        if (Physics.Raycast(transform.position, transform.forward, out hit, bounceDist))
+        {
+            Vector3 incomingVector = hit.point - transform.position;
+            Vector3 reflectVec = Vector3.Reflect(incomingVector, hit.normal);
+            Debug.DrawLine(transform.position, hit.point, Color.red, 1f);
+            Debug.DrawRay(hit.point, reflectVec, Color.green);
+            return reflectVec;
+        }
+        return Vector3.zero;
     }
 
 
