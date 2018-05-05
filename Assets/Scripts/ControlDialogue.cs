@@ -15,6 +15,17 @@ public class ControlDialogue : MonoBehaviour {
     public GameObject textField;
     public GameObject master;
 
+    public GameObject skullSprite;
+
+
+    public Sprite[] character1Sprites;
+    public Sprite[] character2Sprites;
+    public Sprite[] character3Sprites;
+    public Sprite[] character4Sprites;
+    public Sprite[] character5Sprites;
+
+    public int spriteIndex;
+
 
     public int dialogueIndex;
 
@@ -24,6 +35,8 @@ public class ControlDialogue : MonoBehaviour {
 
     private Text txtRefName;
     private Text txtRefBody;
+    public Image imageRef;
+
 
 
     private void Awake()
@@ -31,6 +44,7 @@ public class ControlDialogue : MonoBehaviour {
         txtRefName = nameField.GetComponent<Text>();//or provide from somewhere else (e.g. if you want via find GameObject.Find("CountText").GetComponent<Text>();)
         txtRefBody = textField.GetComponent<Text>();//or provide from somewhere else (e.g. if you want via find GameObject.Find("CountText").GetComponent<Text>();)
 
+        imageRef = textField.GetComponent<Image>();
     }
 
 
@@ -39,6 +53,8 @@ public class ControlDialogue : MonoBehaviour {
     void Start () {
 
         dialogueIndex = 0;
+        spriteIndex = 0;
+
         updateInterval = 0.15f;
 		
 	}
@@ -76,6 +92,8 @@ public class ControlDialogue : MonoBehaviour {
     {
         updateTimer += Time.deltaTime;
 
+       // updateTimer += 0.01f;
+
 
         if (updateTimer >= updateInterval)
         {
@@ -84,6 +102,11 @@ public class ControlDialogue : MonoBehaviour {
                 currentText += upcomingText[dialogueIndex];
                 txtRefBody.text = currentText;
                 dialogueIndex++;
+
+                spriteIndex++;
+                GameObject.Find("SkullSprite").GetComponent<Image>().sprite = character1Sprites[spriteIndex % character1Sprites.Length];
+                //imageRef.sprite = character1Sprites[1];
+
                 updateTimer -= updateInterval;
             }
             else if (updateTimer >= updateInterval*15)

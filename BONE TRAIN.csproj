@@ -90,10 +90,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ControlDialogue.cs" />
     <Compile Include="Assets\Scripts\AssignSpriteBasedOnDirectoin.cs" />
     <Compile Include="Assets\Scripts\BobUpAndDown.cs" />
     <Compile Include="Assets\Scripts\Constants.cs" />
+    <Compile Include="Assets\Scripts\ControlDialogue.cs" />
     <Compile Include="Assets\Scripts\DetermineDirection.cs" />
     <Compile Include="Assets\Scripts\Exit.cs" />
     <Compile Include="Assets\Scripts\FollowPlayer.cs" />
