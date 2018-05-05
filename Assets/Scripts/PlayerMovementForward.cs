@@ -24,8 +24,7 @@ public class PlayerMovementForward : MonoBehaviour
     public float bounceDist;
     bool directionCommitted = false;
     public float minimumMoveSeconds;
-
-    public Vector3 previousPosition;
+    
     public float followDistance;
 
 
@@ -36,7 +35,6 @@ public class PlayerMovementForward : MonoBehaviour
     void Start()
     {
         baseMoveSpeed = moveSpeed;
-        previousPosition = transform.position;
     }
 
     // Update is called once per frame
@@ -111,12 +109,10 @@ public class PlayerMovementForward : MonoBehaviour
     {
         float start = Time.time;
         float end = start + minimumMoveSeconds;
-        StartCoroutine(RecordPositionLater());
         while (Time.time < end || 
             (moveScale == MoveScale.Positive && Input.GetAxis("Horizontal") > 0.8 ||
             moveScale == MoveScale.Negative && Input.GetAxis("Horizontal") < -0.8))
         {
-            StartCoroutine(RecordPositionLater());
             if (inFrontSkeleton == null)
                 HandlePlayerMovement(moveScale);
             else
@@ -151,11 +147,11 @@ public class PlayerMovementForward : MonoBehaviour
     }
 
 
-    public IEnumerator RecordPositionLater()
+    /*public IEnumerator RecordPositionLater()
     {
         yield return new WaitForSeconds(1f);
         previousPosition = transform.position;
-    }
+    }*/
 
     void increaseSpeedOnConstantSpin(int direction)
     {
