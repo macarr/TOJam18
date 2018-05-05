@@ -8,6 +8,9 @@ public class LookAtCamera : MonoBehaviour {
 
     public GameObject camMain;
 
+    public bool dontSkew;
+
+
     // Use this for initialization
     void Start () {
 		
@@ -15,7 +18,15 @@ public class LookAtCamera : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.LookAt(2 * transform.position - camMain.transform.position);
 
+        if (dontSkew)
+        {
+            transform.forward = camMain.transform.forward;
+        }
+        else
+        {
+            transform.LookAt(2 * transform.position - camMain.transform.position, Vector3.up);
+        }
+       
     }
 }
