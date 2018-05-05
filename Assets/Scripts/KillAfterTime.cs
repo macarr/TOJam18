@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class KillAfterTime : MonoBehaviour {
 
+
 	// Use this for initialization
 	void Start () {
 
