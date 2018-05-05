@@ -17,6 +17,7 @@ public class ControlDialogue : MonoBehaviour {
     public GameObject master;
 
     public GameObject skullSprite;
+    public GameObject skullEyeSprite;
 
 
     public Sprite[] character1Sprites;
@@ -114,12 +115,27 @@ public class ControlDialogue : MonoBehaviour {
 
                 spriteIndex++;
 
-               
 
+
+                if (characterName.Contains("Bonebert"))
+                {
+                    GameObject.Find("SkullEyes").GetComponent<Image>().sprite = character3Sprites[0];
+                }
+                if (characterName.Contains("Skullfred"))
+                {
+                    GameObject.Find("SkullEyes").GetComponent<Image>().sprite = character3Sprites[1];
+                }
                 if (characterName.Contains("Bonesly"))
                 {
+                    GameObject.Find("SkullEyes").GetComponent<Image>().sprite = character3Sprites[2];
                     GameObject.Find("SkullSprite").GetComponent<Image>().sprite = character2Sprites[spriteIndex % character2Sprites.Length];
+
                 }
+                if (characterName.Contains("Kyle"))
+                {
+                    GameObject.Find("SkullEyes").GetComponent<Image>().sprite = character3Sprites[3];
+                }
+
                 else
                 {
                     GameObject.Find("SkullSprite").GetComponent<Image>().sprite = character1Sprites[spriteIndex % character1Sprites.Length];
