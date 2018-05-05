@@ -13,9 +13,7 @@ public class PlayerMovementForward : MonoBehaviour
     //1 = left
     //2 = right
 
-
     public float baseMoveSpeed;
-
     public float moveSpeed;
     public float maxMoveSpeed;
 
@@ -24,7 +22,7 @@ public class PlayerMovementForward : MonoBehaviour
     public float maxRotateSpeed;
 
     public float bounceDist;
-    bool moveCommitted = false;
+    bool directionCommitted = false;
     public float minimumMoveSeconds;
 
     public Vector3 previousPosition;
@@ -38,86 +36,95 @@ public class PlayerMovementForward : MonoBehaviour
     void Start()
     {
         baseMoveSpeed = moveSpeed;
+        previousPosition = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(RecordPositionLater());
-        if (positionInLine == 0)
+        if(!directionCommitted)
         {
-            if(!moveCommitted)
+            if (Input.GetAxis("Horizontal") > 0.8)
             {
-                if (Input.GetAxis("Horizontal") > 0)
-                {
-                    moveCommitted = true;
-                    StartCoroutine(MoveMinimum( MoveScale.Positive));
-                    // increaseSpeedOnConstantSpin(2);
-
-                }
-                else if (Input.GetAxis("Horizontal") < 0)
-                {
-                    moveCommitted = true;
-                    StartCoroutine(MoveMinimum(MoveScale.Negative));
-                    //  increaseSpeedOnConstantSpin(1);
-
-                }
+                Debug.Log("Right");
+                directionCommitted = true;
+                StartCoroutine(DoMovement(MoveScale.Positive));
+                // increaseSpeedOnConstantSpin(2);
             }
-
-           // Debug.Log(previousPosition);
-        }
-
-        if (positionInLine != 0 && inFrontSkeleton != null)
-        {
-
-            if (Vector3.Distance(inFrontSkeleton.transform.position, transform.position) > 2f)
+            else if (Input.GetAxis("Horizontal") < -0.8)
             {
-
-                //  transform.LookAt(inFrontSkeleton.GetComponent<PlayerMovementForward>().previousPosition);
-                transform.LookAt(inFrontSkeleton.transform.position);
-
-                //Was trting some stuff... ignore the 'dist' stuff for now
-
-                //float dist = Vector3.Distance(transform.position, inFrontSkeleton.transform.position);
-                //print("Distance to other: " + dist);
-
-
-                    
-                    transform.Translate(Vector3.forward * (moveSpeed * Time.deltaTime));
+                Debug.Log("Left");
+                directionCommitted = true;
+                StartCoroutine(DoMovement(MoveScale.Negative));
+                //  increaseSpeedOnConstantSpin(1);
             }
         }
-
     }
 
     private enum MoveScale { Positive, Negative, }
 
-    IEnumerator MoveMinimum(MoveScale moveScale)
+    private void HandlePlayerMovement(MoveScale moveScale)
+    {
+        if(inFrontSkeleton != null)
+        {
+            Debug.LogError("Follower tried to call player movement :(");
+            return;
+        }
+        switch (moveScale)
+        {
+            case MoveScale.Positive:
+                transform.Rotate(0, rotateSpeed * Time.deltaTime, 0);
+                transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+                checkBounce();
+                break;
+            case MoveScale.Negative:
+                transform.Rotate(0, -rotateSpeed * Time.deltaTime, 0);
+                transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+                checkBounce();
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void HandleFollowerMovement() {
+        if (inFrontSkeleton == null)
+        {
+            Debug.LogError("Follower movement called by player :(");
+            return;
+        }
+        if (Vector3.Distance(inFrontSkeleton.transform.position, transform.position) > followDistance)
+        {
+            //transform.LookAt(inFrontSkeleton.GetComponent<PlayerMovementForward>().previousPosition);
+            transform.LookAt(inFrontSkeleton.transform.position);
+
+            //Was trting some stuff... ignore the 'dist' stuff for now
+
+            //float dist = Vector3.Distance(transform.position, inFrontSkeleton.transform.position);
+            //print("Distance to other: " + dist);
+            transform.Translate(Vector3.forward * (moveSpeed * Time.deltaTime));
+        }
+        
+    }
+
+    IEnumerator DoMovement(MoveScale moveScale)
     {
         float start = Time.time;
-        float end = Time.time + minimumMoveSeconds;
-        while (Time.time < end)
+        float end = start + minimumMoveSeconds;
+        StartCoroutine(RecordPositionLater());
+        while (Time.time < end || 
+            (moveScale == MoveScale.Positive && Input.GetAxis("Horizontal") > 0.8 ||
+            moveScale == MoveScale.Negative && Input.GetAxis("Horizontal") < -0.8))
         {
-            switch (moveScale) {
-                case MoveScale.Positive:
-                    transform.Rotate(0, rotateSpeed * Time.deltaTime, 0);
-                    transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
-                    checkBounce();
-                    break;
-                case MoveScale.Negative:
-                    transform.Rotate(0, -rotateSpeed * Time.deltaTime, 0);
-                    transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
-                    checkBounce();
-                    break;
-                default:
-                    break;
-            }
+            StartCoroutine(RecordPositionLater());
+            if (inFrontSkeleton == null)
+                HandlePlayerMovement(moveScale);
+            else
+                HandleFollowerMovement();
             yield return null;
         }
-        while(Input.GetAxis("Horizontal") == 1 || Input.GetAxis("Horizontal") == -1)
-        {
-            yield return null;
-        }
-        moveCommitted = false;
+        Debug.Log("Finished doMovement");
+        directionCommitted = false;
     }
 
     void checkBounce()
@@ -146,7 +153,7 @@ public class PlayerMovementForward : MonoBehaviour
 
     public IEnumerator RecordPositionLater()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
         previousPosition = transform.position;
     }
 
