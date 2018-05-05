@@ -42,3 +42,5 @@ Thumbs.db
 Library/
 Temp/
 .vs/
+*.csproj
+*.sln
