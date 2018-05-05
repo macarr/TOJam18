@@ -560,6 +560,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114744663497186690, guid: 614b7514e06d23c4e87f97e39e19b440,
+        type: 2}
+      propertyPath: character2Sprites.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 224650750060071986, guid: 614b7514e06d23c4e87f97e39e19b440,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -654,6 +659,46 @@ Prefab:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 114791381415770794, guid: 614b7514e06d23c4e87f97e39e19b440,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c4c9a6b8ab763e44db85587bd153c356,
+        type: 3}
+    - target: {fileID: 114702311280971474, guid: 614b7514e06d23c4e87f97e39e19b440,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 224674009819171018, guid: 614b7514e06d23c4e87f97e39e19b440,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -172.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114744663497186690, guid: 614b7514e06d23c4e87f97e39e19b440,
+        type: 2}
+      propertyPath: character2Sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7edd742baf46abe45a82695fae06ccf1,
+        type: 3}
+    - target: {fileID: 114744663497186690, guid: 614b7514e06d23c4e87f97e39e19b440,
+        type: 2}
+      propertyPath: character2Sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7edd742baf46abe45a82695fae06ccf1,
+        type: 3}
+    - target: {fileID: 114744663497186690, guid: 614b7514e06d23c4e87f97e39e19b440,
+        type: 2}
+      propertyPath: character2Sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7edd742baf46abe45a82695fae06ccf1,
+        type: 3}
+    - target: {fileID: 114744663497186690, guid: 614b7514e06d23c4e87f97e39e19b440,
+        type: 2}
+      propertyPath: character2Sprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7edd742baf46abe45a82695fae06ccf1,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 614b7514e06d23c4e87f97e39e19b440, type: 2}
   m_IsPrefabParent: 0
