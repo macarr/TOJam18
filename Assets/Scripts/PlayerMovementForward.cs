@@ -123,7 +123,12 @@ public class PlayerMovementForward : MonoBehaviour
         Vector3 bounceVector = Bounce();
         if(bounceVector != Vector3.zero)
         {
+            bounceVector.y = 0;
             transform.rotation = Quaternion.FromToRotation(transform.right, bounceVector);
+            if(transform.rotation.z > 0 || transform.rotation.x > 0)
+            {
+                Debug.Log("heck");
+            }
         }
     }
 
