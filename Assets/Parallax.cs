@@ -14,9 +14,14 @@ public class Parallax : MonoBehaviour {
 	void Update () {
         transform.Translate(parallaxSpeed*Time.deltaTime, 0.0f, 0.0f);
 
+
         if (transform.position.x >= 40.6)
         {
+            //  Debug.Log("thing: " + transform.position.x);
+
+            transform.position = new Vector3();
             transform.Translate(-60.9f, 0.0f, 0.0f);
+
         }
 	}
 }
