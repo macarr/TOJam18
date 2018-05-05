@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowPlayer : MonoBehaviour {
+public class FollowPlayer : MonoBehaviour
+{
 
     public bool lookAtPlayer;
 
@@ -19,12 +20,14 @@ public class FollowPlayer : MonoBehaviour {
     public GameObject leadSkeleton;
 
     // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         if (leadSkeleton != null)
         {
             if (lookAtPlayer)
