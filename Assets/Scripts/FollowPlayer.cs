@@ -20,6 +20,11 @@ public class FollowPlayer : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+
+        if (leadSkeleton == null)
+        {
+            leadSkeleton = GameObject.Find("Skeleton");
+        }
 		
 	}
 	

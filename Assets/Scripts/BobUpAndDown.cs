@@ -27,7 +27,7 @@ public class BobUpAndDown : MonoBehaviour {
         if (bobTween > 360)
             bobTween -= 360;
 
-        transform.position = new Vector3(transform.position.x, transform.position.y + (Mathf.Cos(bobTween + offset)*0.02f), transform.position.z);
+        transform.position = new Vector3(transform.position.x, transform.position.y + (Mathf.Cos(bobTween + offset)*Time.deltaTime*0.5f), transform.position.z);
 		
 	}
 }

@@ -6,7 +6,16 @@ public class AssignSpriteBasedOnDirectoin : MonoBehaviour {
 
     public GameObject associatedSkeleton;
 
-    public Sprite[] directionSprites;
+    public Sprite[] directionSprites1;
+    public Sprite[] directionSprites2;
+    public Sprite[] directionSprites3;
+    public Sprite[] directionSprites4;
+
+    public float animCycleCounter;
+    public float animCycleInterval;
+
+
+
 
 
     // Use this for initialization
@@ -17,12 +26,36 @@ public class AssignSpriteBasedOnDirectoin : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (associatedSkeleton.GetComponent<PlayerMovementForward>().positionInLine == 0)
-         //Debug.Log(associatedSkeleton.GetComponent<DetermineDirection>().direction + " , " + directionSprites[associatedSkeleton.GetComponent<DetermineDirection>().direction]);
+        animCycleCounter += Time.deltaTime;
+
+       // if (associatedSkeleton.GetComponent<PlayerMovementForward>().positionInLine == 0)
+       //Debug.Log(associatedSkeleton.GetComponent<DetermineDirection>().direction + " , " + directionSprites1[associatedSkeleton.GetComponent<DetermineDirection>().direction]);
 
         if (associatedSkeleton != null)
         {
-            GetComponent<SpriteRenderer>().sprite = directionSprites[associatedSkeleton.GetComponent<DetermineDirection>().direction];
+
+            if (animCycleCounter < animCycleInterval * 1)
+            {
+                GetComponent<SpriteRenderer>().sprite = directionSprites1[associatedSkeleton.GetComponent<DetermineDirection>().direction];
+            }
+            else if (animCycleCounter < animCycleInterval * 2)
+            {
+                GetComponent<SpriteRenderer>().sprite = directionSprites2[associatedSkeleton.GetComponent<DetermineDirection>().direction];
+            }
+            else if (animCycleCounter < animCycleInterval * 3)
+            {
+                GetComponent<SpriteRenderer>().sprite = directionSprites3[associatedSkeleton.GetComponent<DetermineDirection>().direction];
+            }
+            else if (animCycleCounter < animCycleInterval * 4)
+            {
+                GetComponent<SpriteRenderer>().sprite = directionSprites4[associatedSkeleton.GetComponent<DetermineDirection>().direction];
+            }
+            else
+            {
+                animCycleCounter -= animCycleInterval * 4;
+                GetComponent<SpriteRenderer>().sprite = directionSprites1[associatedSkeleton.GetComponent<DetermineDirection>().direction];
+            }
+
         }
 	}
 }
