@@ -91,6 +91,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\KillAfterTime.cs" />
+    <Compile Include="Assets\OpenGate.cs" />
     <Compile Include="Assets\Parallax.cs" />
     <Compile Include="Assets\Scripts\AssignSpriteBasedOnDirectoin.cs" />
     <Compile Include="Assets\Scripts\BobUpAndDown.cs" />
