@@ -47,24 +47,24 @@ public class PlayerMovementForward : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.RightArrow))
             {
-                transform.Rotate(0, rotateSpeed, 0);
-                transform.Translate(Vector3.forward * moveSpeed);
-                // increaseSpeedOnConstantSpin(2);
+                transform.Rotate(0, rotateSpeed * Time.deltaTime, 0);
+                transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+               // increaseSpeedOnConstantSpin(2);
 
             }
             else if (Input.GetKey(KeyCode.LeftArrow))
             {
-                transform.Rotate(0, -rotateSpeed, 0);
-                transform.Translate(Vector3.forward * moveSpeed);
-                //  increaseSpeedOnConstantSpin(1);
+                transform.Rotate(0, -rotateSpeed * Time.deltaTime, 0);
+                transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+              //  increaseSpeedOnConstantSpin(1);
 
             }
             else
             {
-                // increaseSpeedOnConstantSpin(0);
+               // increaseSpeedOnConstantSpin(0);
             }
 
-            // Debug.Log(previousPosition);
+           // Debug.Log(previousPosition);
         }
 
         if (positionInLine != 0)
@@ -73,7 +73,7 @@ public class PlayerMovementForward : MonoBehaviour
             {
                 if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
                 {
-                    //  transform.LookAt(inFrontSkeleton.GetComponent<PlayerMovementForward>().previousPosition);
+                  //  transform.LookAt(inFrontSkeleton.GetComponent<PlayerMovementForward>().previousPosition);
                     transform.LookAt(inFrontSkeleton.transform.position);
 
                     //Was trting some stuff... ignore the 'dist' stuff for now
@@ -82,8 +82,8 @@ public class PlayerMovementForward : MonoBehaviour
                     //print("Distance to other: " + dist);
 
 
-
-                    transform.Translate(Vector3.forward * (moveSpeed * 1.0f));
+                    
+                        transform.Translate(Vector3.forward * (moveSpeed * Time.deltaTime));
                 }
             }
         }
@@ -108,10 +108,10 @@ public class PlayerMovementForward : MonoBehaviour
             }
 
             rotateSpeed *= 1.01f;
-            if (rotateSpeed > maxRotateSpeed)
-            {
+           if (rotateSpeed > maxRotateSpeed)
+           {
                 rotateSpeed = maxRotateSpeed;
-            }
+          }
         }
         else
         {
