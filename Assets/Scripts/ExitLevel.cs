@@ -24,7 +24,7 @@ public class ExitLevel : MonoBehaviour {
                 StartCoroutine(WinLevel());
                 initiated = true;
             }
-            //Instantiate(poofEffect, other.transform);
+            Instantiate(poofEffect, other.gameObject.transform);
             other.gameObject.SetActive(false);
         }
     }
