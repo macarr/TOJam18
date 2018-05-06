@@ -13,13 +13,13 @@ public class Unlocker : MonoBehaviour
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
-        animationManager = GameObject.Find("AnimationManager");
+        animationManager = GameObject.Find(Constants.AnimationManager);
     }
 
     void OnTriggerEnter(Collider other)
     {
         Debug.Log(other.tag);
-        if (other.tag == "Skeleton")
+        if (other.tag == Constants.Skeleton)
         {
             animationManager.GetComponent<AnimationManager>().PlayPoofEffect(transform.position, transform.rotation);
             AudioSource.PlayClipAtPoint(audioSource.clip, Camera.main.transform.position);

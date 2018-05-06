@@ -11,13 +11,13 @@ public class ExitLevel : MonoBehaviour {
 
     private void Awake()
     {
-        levelManager = GameObject.Find("LevelManager");
-        animationManager = GameObject.Find("AnimationManager");
+        levelManager = GameObject.Find(Constants.LevelManager);
+        animationManager = GameObject.Find(Constants.AnimationManager);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Skeleton")
+        if (other.tag == Constants.Skeleton)
         {
             if(!initiated)
             {

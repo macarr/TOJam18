@@ -12,7 +12,7 @@ public class SeekPlayer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        player = GameObject.FindGameObjectWithTag("Skeleton");
+        player = GameObject.FindGameObjectWithTag(Constants.Skeleton);
 	}
 	
 	// Update is called once per frame
