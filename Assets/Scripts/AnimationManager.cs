@@ -47,4 +47,9 @@ public class AnimationManager : MonoBehaviour {
     {
         Instantiate(poofEffect, position, rotation);
     }
+
+    public void PlayExplosionSound()
+    {
+        AudioSource.PlayClipAtPoint(GetComponent<AudioSource>().clip, Camera.main.transform.position);
+    }
 }

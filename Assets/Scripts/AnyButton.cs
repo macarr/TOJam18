@@ -15,7 +15,7 @@ public class AnyButton : MonoBehaviour {
 	void Update () {
 		if(Input.anyKeyDown)
         {
-            levelManager.GetComponent<LevelManager>().nextLevel();
+            levelManager.GetComponent<LevelManager>().NextLevel();
         }
 	}
 }

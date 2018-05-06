@@ -22,7 +22,7 @@ public class Unlocker : MonoBehaviour
         if (other.tag == "Skeleton")
         {
             animationManager.GetComponent<AnimationManager>().PlayPoofEffect(transform.position, transform.rotation);
-            AudioSource.PlayClipAtPoint(audioSource.clip, transform.position);
+            AudioSource.PlayClipAtPoint(audioSource.clip, Camera.main.transform.position);
             UnlockDoors();
             gameObject.SetActive(false);
         }

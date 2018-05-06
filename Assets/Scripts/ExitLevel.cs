@@ -36,6 +36,6 @@ public class ExitLevel : MonoBehaviour {
     IEnumerator WinLevel()
     {
         yield return new WaitForSeconds(delayToLoadLevel);
-        levelManager.GetComponent<LevelManager>().nextLevel();
+        levelManager.GetComponent<LevelManager>().NextLevel();
     }
 }

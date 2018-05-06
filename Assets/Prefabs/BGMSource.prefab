@@ -9,52 +9,52 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1510006279757980}
+  m_RootGameObject: {fileID: 1262113329456930}
   m_IsPrefabParent: 1
---- !u!1 &1510006279757980
+--- !u!1 &1262113329456930
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4595496796828004}
-  - component: {fileID: 114237261467653064}
-  - component: {fileID: 82074788026009164}
+  - component: {fileID: 4806864639573454}
+  - component: {fileID: 82523428791957740}
+  - component: {fileID: 114483698921561462}
   m_Layer: 0
-  m_Name: AnimationManager
+  m_Name: BGMSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4595496796828004
+--- !u!4 &4806864639573454
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1510006279757980}
+  m_GameObject: {fileID: 1262113329456930}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.14914645, y: 6.7855167, z: 1.872611}
+  m_LocalPosition: {x: -2.0264738, y: 0.82087606, z: 14.976459}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &82074788026009164
+--- !u!82 &82523428791957740
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1510006279757980}
+  m_GameObject: {fileID: 1262113329456930}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c1a4126e8836b2a4b88e4742a8202301, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.6
+  m_audioClip: {fileID: 8300000, guid: 3307bfd5b77c22d4793b05c649126b3b, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.3
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -121,19 +121,14 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114237261467653064
+--- !u!114 &114483698921561462
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1510006279757980}
+  m_GameObject: {fileID: 1262113329456930}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfd5d0529b9cb354db25b5798e786f62, type: 3}
+  m_Script: {fileID: 11500000, guid: 48d62ef79496de44ea64fca1cf95983d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectDistFromCamera: 10
-  effectVerticalOffset: -2
-  winEffect: {fileID: 1427571449272300, guid: b2092971662376b44a39dccbb3ac83fc, type: 2}
-  loseEffect: {fileID: 1316048568805494, guid: 733d2abcccf90884a8fd8564d3b4a21d, type: 2}
-  poofEffect: {fileID: 1393534337390760, guid: e31a5a2df7204f04e997491710c8b950, type: 2}

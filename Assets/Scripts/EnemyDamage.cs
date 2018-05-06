@@ -16,7 +16,14 @@ public class EnemyDamage : MonoBehaviour
 
     public void LoseLevel()
     {
+        animationManager.GetComponent<AnimationManager>().PlayExplosionSound();
         Camera.main.GetComponent<FollowPlayer>().StopFollowing();
+        StartCoroutine(WaitAndPlayLoseAnimation());
+    }
+
+    IEnumerator WaitAndPlayLoseAnimation()
+    {
+        yield return new WaitForSeconds(Constants.WaitAfterExplode);
         animationManager.GetComponent<AnimationManager>().PlayLoseAnimation();
         StartCoroutine(WaitAndLoseLevel());
     }
@@ -24,7 +31,7 @@ public class EnemyDamage : MonoBehaviour
     IEnumerator WaitAndLoseLevel()
     {
         yield return new WaitForSeconds(Constants.WaitAfterDeath);
-        levelManager.GetComponent<LevelManager>().resetLevel();
+        levelManager.GetComponent<LevelManager>().ResetLevel();
     }
 
 
