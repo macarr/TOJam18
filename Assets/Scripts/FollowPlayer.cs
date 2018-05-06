@@ -64,6 +64,6 @@ public class FollowPlayer : MonoBehaviour {
 
     public void StopFollowing()
     {
-        Destroy(this);
+        gameObject.GetComponent<FollowPlayer>().enabled = false;
     }
 }

@@ -1229,7 +1229,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayToLoadLevel: 1
-  poofEffect: {fileID: 1393534337390760, guid: e31a5a2df7204f04e997491710c8b950, type: 2}
+  winEffect: {fileID: 1427571449272300, guid: b2092971662376b44a39dccbb3ac83fc, type: 2}
+  distance: 10
 --- !u!1 &1188276446 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1256508887318200, guid: 7960a0bc789e09545a6fb728f38d36ff,
