@@ -10,11 +10,14 @@ public class LevelManager : MonoBehaviour {
     private string[] levelOrder = new string[]
     {
         Constants.Title,
-        Constants.LevelOne,
-        Constants.LevelTwo,
-        Constants.LevelThree,
-        Constants.LevelFour,
-        Constants.LevelFive,
+        Constants.Level1,
+        Constants.Level2,
+        Constants.Level3,
+        Constants.Level4,
+        Constants.Level5,
+        Constants.Level6,
+        Constants.Level7,
+        Constants.Level8,
         Constants.EndScreen,
     };
 
