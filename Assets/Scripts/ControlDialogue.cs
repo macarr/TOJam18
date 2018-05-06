@@ -34,6 +34,9 @@ public class ControlDialogue : MonoBehaviour {
     public float updateTimer;
     public float updateInterval;
 
+    public bool dialogueFinished;
+
+
 
     private Text txtRefName;
     private Text txtRefBody;
@@ -79,6 +82,7 @@ public class ControlDialogue : MonoBehaviour {
     {
 
         master.SetActive(true);
+        dialogueFinished = false;
 
         dialogueIndex = 0;
         currentText = "";
@@ -131,11 +135,10 @@ public class ControlDialogue : MonoBehaviour {
                     GameObject.Find("SkullSprite").GetComponent<Image>().sprite = character2Sprites[spriteIndex % character2Sprites.Length];
 
                 }
-                if (characterName.Contains("Kyle"))
+                else if (characterName.Contains("Kyle"))
                 {
                     GameObject.Find("SkullEyes").GetComponent<Image>().sprite = character3Sprites[3];
                 }
-
                 else
                 {
                     GameObject.Find("SkullSprite").GetComponent<Image>().sprite = character1Sprites[spriteIndex % character1Sprites.Length];
@@ -147,9 +150,11 @@ public class ControlDialogue : MonoBehaviour {
 
                 updateTimer -= updateInterval;
             }
-            else if (updateTimer >= (updateInterval*15 + 5.0f))
+            else if (updateTimer >= (updateInterval*15 + 2.0f))
             {
                 master.SetActive(false);
+                dialogueFinished = true;
+
             }
         }
 
