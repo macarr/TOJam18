@@ -18,6 +18,7 @@ public static class Constants {
 
     //other cross-class constants
     public const float WaitAfterDeath = 5f;
+    public const float WaitAfterExplode = 1.5f;
     public const string LevelManager = "LevelManager";
 
     public static Quaternion ClampRotationToY(Quaternion rotation)

@@ -16,7 +16,14 @@ public class EnemyDamage : MonoBehaviour
 
     public void LoseLevel()
     {
+        animationManager.GetComponent<AnimationManager>().PlayExplosionSound(transform.position);
         Camera.main.GetComponent<FollowPlayer>().StopFollowing();
+        StartCoroutine(WaitAndPlayLoseAnimation());
+    }
+
+    IEnumerator WaitAndPlayLoseAnimation()
+    {
+        yield return new WaitForSeconds(Constants.WaitAfterExplode);
         animationManager.GetComponent<AnimationManager>().PlayLoseAnimation();
         StartCoroutine(WaitAndLoseLevel());
     }
