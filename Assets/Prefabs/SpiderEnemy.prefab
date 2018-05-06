@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114854231110834126}
   - component: {fileID: 114223661645152970}
   - component: {fileID: 114534303938159610}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SpiderEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 212227530910321864}
   - component: {fileID: 114261031707890756}
   - component: {fileID: 114994563634935628}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SpoderSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

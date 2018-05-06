@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 135507711545998152}
   - component: {fileID: 114395472401823386}
   - component: {fileID: 114020320523482078}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: WillOWisp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 114978494794479952}
   - component: {fileID: 114301067211847230}
   - component: {fileID: 114463968662156744}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SeekerSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
