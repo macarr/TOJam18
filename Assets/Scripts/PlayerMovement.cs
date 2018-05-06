@@ -56,6 +56,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public bool IsMoving()
+    {
+        return directionCommitted;
+    }
+
     private enum MoveScale { Positive, Negative, }
 
     private void HandlePlayerMovement(MoveScale moveScale)
