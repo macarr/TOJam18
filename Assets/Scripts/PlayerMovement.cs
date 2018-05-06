@@ -88,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
         if (Vector3.Distance(inFrontSkeleton.transform.position, transform.position) > followDistance ||
-            !inFrontSkeleton.active)
+            !inFrontSkeleton.activeInHierarchy)
         {
             //transform.LookAt(inFrontSkeleton.GetComponent<PlayerMovementForward>().previousPosition);
             transform.LookAt(inFrontSkeleton.transform.position);
