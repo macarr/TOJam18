@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Constants : MonoBehaviour {
+public static class Constants {
 
     //tag constants
     public const string Skeleton = "Skeleton";
@@ -18,4 +18,11 @@ public class Constants : MonoBehaviour {
     //other cross-class constants
     public const float WaitAfterDeath = 5f;
     public const string LevelManager = "LevelManager";
+
+    public static Quaternion ClampRotationToY(Quaternion rotation)
+    {
+        rotation.x = 0;
+        rotation.z = 0;
+        return rotation;
+    }
 }
