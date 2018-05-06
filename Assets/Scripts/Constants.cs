@@ -8,6 +8,7 @@ public class Constants : MonoBehaviour {
     public const string Skeleton = "Skeleton";
 
     //add to or update this as necessary when new scenes are added
+    public const string Title = "Title";
     public const string LevelOne = "Level1";
     public const string LevelTwo = "Level2";
     public const string LevelThree = "Level3";
@@ -15,4 +16,5 @@ public class Constants : MonoBehaviour {
 
     //other cross-class constants
     public const float WaitAfterDeath = 5f;
+    public const string LevelManager = "LevelManager";
 }

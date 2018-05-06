@@ -42,5 +42,6 @@ Thumbs.db
 Library/
 Temp/
 .vs/
+BONETRAIN_Data/
 *.csproj
 *.sln
