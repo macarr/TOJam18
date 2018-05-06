@@ -1323,8 +1323,8 @@ MonoBehaviour:
   baseRotateSpeed: 0
   maxRotateSpeed: 320
   bounceDist: 1
-  minimumMoveSeconds: 0.5
-  followDistance: 1
+  minimumMoveSeconds: 0.1
+  followDistance: 1.1
   inFrontSkeleton: {fileID: 0}
   behindSkeleton: {fileID: 1491117371657252}
   bonkEffect: {fileID: 1946141102166808, guid: b67a3c50c58e2dc418b7db8b2a2c713e, type: 2}
@@ -1361,7 +1361,7 @@ MonoBehaviour:
   maxRotateSpeed: 320
   bounceDist: 1.5
   minimumMoveSeconds: 0.5
-  followDistance: 1
+  followDistance: 1.1
   inFrontSkeleton: {fileID: 1770984214458500}
   behindSkeleton: {fileID: 1684779072877524}
   bonkEffect: {fileID: 0}
@@ -1546,7 +1546,7 @@ MonoBehaviour:
   maxRotateSpeed: 320
   bounceDist: 1.5
   minimumMoveSeconds: 0.5
-  followDistance: 1
+  followDistance: 1.1
   inFrontSkeleton: {fileID: 1684779072877524}
   behindSkeleton: {fileID: 0}
   bonkEffect: {fileID: 0}
@@ -1583,7 +1583,7 @@ MonoBehaviour:
   maxRotateSpeed: 320
   bounceDist: 1.5
   minimumMoveSeconds: 0.5
-  followDistance: 1
+  followDistance: 1.1
   inFrontSkeleton: {fileID: 1491117371657252}
   behindSkeleton: {fileID: 1049756956347350}
   bonkEffect: {fileID: 0}
@@ -1920,7 +1920,7 @@ MonoBehaviour:
   maxRotateSpeed: 320
   bounceDist: 1.5
   minimumMoveSeconds: 0.5
-  followDistance: 1
+  followDistance: 1.1
   inFrontSkeleton: {fileID: 1049756956347350}
   behindSkeleton: {fileID: 1520879499953282}
   bonkEffect: {fileID: 0}
@@ -1956,7 +1956,7 @@ MonoBehaviour:
   maxRotateSpeed: 320
   bounceDist: 1.5
   minimumMoveSeconds: 0.5
-  followDistance: 1
+  followDistance: 1.1
   inFrontSkeleton: {fileID: 1989092921460770}
   behindSkeleton: {fileID: 1770984214458500}
   bonkEffect: {fileID: 0}

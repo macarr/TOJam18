@@ -6,14 +6,13 @@ public class ExitLevel : MonoBehaviour {
     public float delayToLoadLevel = 1f;
 
     GameObject levelManager;
-    public GameObject winEffect;
-    public float winEffectDistanceFromCamera = 10f;
-    public float winEffectVerticalOffset = -2f;
+    GameObject animationManager;
     private bool initiated = false;
 
     private void Awake()
     {
         levelManager = GameObject.Find("LevelManager");
+        animationManager = GameObject.Find("AnimationManager");
     }
 
     private void OnTriggerEnter(Collider other)
@@ -25,11 +24,7 @@ public class ExitLevel : MonoBehaviour {
                 GameObject camera = Camera.main.gameObject;
                 Debug.Log("Finished level");
                 Camera.main.GetComponent<FollowPlayer>().StopFollowing();
-                Vector3 animationPosition = camera.transform.position + camera.transform.forward * winEffectDistanceFromCamera;
-                animationPosition.y = animationPosition.y + winEffectVerticalOffset;
-                Quaternion animationRotation = new Quaternion(camera.transform.rotation.x, camera.transform.rotation.y, 0.0f, camera.transform.rotation.w);
-                GameObject.Find("Canvas").SetActive(false);
-                Instantiate(winEffect, animationPosition, animationRotation);
+                animationManager.GetComponent<AnimationManager>().PlayWinAnimation();
                 StartCoroutine(WinLevel());
                 initiated = true;
             }
