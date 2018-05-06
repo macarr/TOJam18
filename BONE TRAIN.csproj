@@ -91,6 +91,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AnimateIn.cs" />
+    <Compile Include="Assets\Scripts\AnimationManager.cs" />
     <Compile Include="Assets\Scripts\AnyButton.cs" />
     <Compile Include="Assets\Scripts\AssignDialogue.cs" />
     <Compile Include="Assets\Scripts\AssignRandomSprite.cs" />
