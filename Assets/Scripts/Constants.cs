@@ -10,8 +10,8 @@ public static class Constants {
     //add to or update this as necessary when new scenes are added
     public const string Title = "Title";
     public const string LevelOne = "Level1";
-    public const string LevelTwo = "Level2";
-    public const string LevelThree = "Level3";
+    public const string LevelTwo = "level2";
+    public const string LevelThree = "level3";
     public const string LevelFour = "Level4";
     public const string EndGame = "EndGame";
 
