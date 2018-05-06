@@ -38,28 +38,32 @@ public class LevelManager : MonoBehaviour {
         if (Input.GetButtonDown("NextLevelCheat"))
         {
             Debug.Log("Skipped level");
-            nextLevel();
+            NextLevel();
         }
         else if (Input.GetButtonDown("ResetGameCheat"))
         {
-            resetGame();
+            ResetGame();
+        }
+        else if (Input.GetButtonDown("Cancel"))
+        {
+            QuitGame();
         }
     }
 
-    void resetGame()
+    void ResetGame()
     {
         Debug.Log("Resetting game state");
         currentLevel = 0;
-        loadLevel(Constants.Title);
+        LoadLevel(Constants.Title);
     }
 
-    public void resetLevel()
+    public void ResetLevel()
     {
         Debug.Log("Reloading current level");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void nextLevel()
+    public void NextLevel()
     {
         currentLevel++;
         if(currentLevel >= levelOrder.Length)
@@ -71,12 +75,17 @@ public class LevelManager : MonoBehaviour {
         {
             Debug.Log("Loading next level");
         }
-        loadLevel(levelOrder[currentLevel]);
+        LoadLevel(levelOrder[currentLevel]);
     }
 
-    void loadLevel(string levelName)
+    void LoadLevel(string levelName)
     {
         Debug.Log(string.Format("Loading level {0}", levelName));
         SceneManager.LoadScene(levelName);
+    }
+
+    void QuitGame()
+    {
+        Application.Quit();
     }
 }

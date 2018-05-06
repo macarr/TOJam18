@@ -21,15 +21,24 @@ EditorBuildSettings:
     path: Assets/Scenes/Level4.unity
     guid: 9cba6dc50e201e047881495b0e66df4f
   - enabled: 1
-    path: Assets/Scenes/EndScreen.unity
-    guid: 4c5acf9e68095884fb7d5259cd7c0414
-  - enabled: 1
     path: Assets/Scenes/Level5.unity
     guid: 5e42daf45487e99488c5a44a75f2b4ee
-  - enabled: 0
-    path: Assets/Scenes/EndGame.unity
-    guid: 45eb0188bdfcf0e4184eb2fa7dd268bb
   - enabled: 1
+    path: Assets/Scenes/Level6.unity
+    guid: 357321ddcda0a9b478d6c2d63da6d039
+  - enabled: 1
+    path: Assets/Scenes/Level7.unity
+    guid: d5f64014cec13ce4abe6b2e5300324d3
+  - enabled: 1
+    path: Assets/Scenes/Level8.unity
+    guid: 3da40b04345945a4cb646a401bee5131
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: 4c5acf9e68095884fb7d5259cd7c0414
+  - enabled: 0
+    path: 
+    guid: 45eb0188bdfcf0e4184eb2fa7dd268bb
+  - enabled: 0
     path: Assets/Scenes/Level1 test.unity
     guid: c97571ed821f5574c9d713bb12cd8167
   - enabled: 0
@@ -39,8 +48,8 @@ EditorBuildSettings:
     path: 
     guid: 61c7a2e5ebc85b345afd047d7afadbef
   - enabled: 0
-    path: Assets/Scenes/MattsTestLevel.unity
+    path: 
     guid: 1d0d10e5df8e0584cb3129d1f79991d9
   - enabled: 0
-    path: Assets/Scenes/TestLevel.unity
+    path: 
     guid: 2329241fe1740b943989bc8a03704b97
