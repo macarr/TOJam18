@@ -5,18 +5,16 @@ using UnityEngine;
 public class EnemyDamage : MonoBehaviour
 {
     GameObject levelManager;
-    GameObject camera;
 
     // Use this for initialization
     void Awake ()
     {
         levelManager = GameObject.Find("LevelManager");
-        camera = GameObject.Find("Main Camera");
     }
 
     public void LoseLevel()
     {
-        camera.GetComponent<FollowPlayer>().StopFollowing();
+        Camera.main.GetComponent<FollowPlayer>().StopFollowing();
         StartCoroutine(WaitAndLoseLevel());
     }
 

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
-    private GameObject _instance = null;
+    private static GameObject _instance = null;
     private int currentLevel = 0;
     private string[] levelOrder = new string[]
     {
@@ -13,6 +13,7 @@ public class LevelManager : MonoBehaviour {
         Constants.LevelOne,
         Constants.LevelTwo,
         Constants.LevelThree,
+        Constants.LevelFour,
         Constants.EndGame,
     };
 
@@ -26,6 +27,15 @@ public class LevelManager : MonoBehaviour {
         if (_instance != gameObject)
             Destroy(gameObject);
 
+    }
+
+    private void Update()
+    {
+        if(Input.GetButtonDown("NextLevelCheat"))
+        {
+            Debug.Log("Skipped level");
+            nextLevel();
+        }
     }
 
     public void resetLevel()

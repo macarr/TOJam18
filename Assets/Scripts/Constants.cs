@@ -12,6 +12,7 @@ public class Constants : MonoBehaviour {
     public const string LevelOne = "Level1";
     public const string LevelTwo = "Level2";
     public const string LevelThree = "Level3";
+    public const string LevelFour = "Level4";
     public const string EndGame = "EndGame";
 
     //other cross-class constants

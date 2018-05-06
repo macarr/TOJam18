@@ -339,10 +339,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1390077130516906}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f993860189c164468e89bf281662974, type: 3}
+  m_Script: {fileID: 11500000, guid: e5a144f76fa20c84d9585bcf8194ce32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelManager: {fileID: 0}
+  delayToLoadLevel: 1
+  poofEffect: {fileID: 0}
 --- !u!114 &114225297637477730
 MonoBehaviour:
   m_ObjectHideFlags: 1
