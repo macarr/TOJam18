@@ -90,9 +90,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AnyButton.cs" />
-    <Compile Include="Assets\AssignDialogue.cs" />
-    <Compile Include="Assets\PatrolMovement.cs" />
+    <Compile Include="Assets\Scripts\AnimateIn.cs" />
+    <Compile Include="Assets\Scripts\AnyButton.cs" />
+    <Compile Include="Assets\Scripts\AssignDialogue.cs" />
     <Compile Include="Assets\Scripts\AssignSpriteBasedOnDirectoin.cs" />
     <Compile Include="Assets\Scripts\BobUpAndDown.cs" />
     <Compile Include="Assets\Scripts\Constants.cs" />
@@ -108,8 +108,10 @@
     <Compile Include="Assets\Scripts\LookAtCamera.cs" />
     <Compile Include="Assets\Scripts\OpenGate.cs" />
     <Compile Include="Assets\Scripts\Parallax.cs" />
+    <Compile Include="Assets\Scripts\PatrolMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\SpawnStarsOnClick.cs" />
+    <Compile Include="Assets\Scripts\swapSpriteAfterTime.cs" />
     <Compile Include="Assets\Scripts\Unlocker.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
