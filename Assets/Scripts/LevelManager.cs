@@ -31,11 +31,22 @@ public class LevelManager : MonoBehaviour {
 
     private void Update()
     {
-        if(Input.GetButtonDown("NextLevelCheat"))
+        if (Input.GetButtonDown("NextLevelCheat"))
         {
             Debug.Log("Skipped level");
             nextLevel();
         }
+        else if (Input.GetButtonDown("ResetGameCheat"))
+        {
+            resetGame();
+        }
+    }
+
+    void resetGame()
+    {
+        Debug.Log("Resetting game state");
+        currentLevel = 0;
+        loadLevel(Constants.Title);
     }
 
     public void resetLevel()

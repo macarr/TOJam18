@@ -2389,7 +2389,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayToLoadLevel: 1
-  poofEffect: {fileID: 0}
+  winEffect: {fileID: 1427571449272300, guid: b2092971662376b44a39dccbb3ac83fc, type: 2}
+  distance: 10
 --- !u!1 &1186977955
 GameObject:
   m_ObjectHideFlags: 0

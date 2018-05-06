@@ -49,7 +49,7 @@ public class AnimateIn : MonoBehaviour {
         }else
         {
             transform.Translate(animationDirection.x, animationDirection.y, animationDirection.z);
-            transform.Rotate(transform.rotation.x + animationRotation.x, transform.rotation.y + animationRotation.y, transform.rotation.z + animationRotation.z);
+            //transform.Rotate(transform.rotation.x + animationRotation.x, transform.rotation.y + animationRotation.y, transform.rotation.z + animationRotation.z);
             transform.localScale += new Vector3(animationScale.x, animationScale.y, animationScale.z);
 
 
