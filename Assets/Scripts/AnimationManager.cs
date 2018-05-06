@@ -9,6 +9,7 @@ public class AnimationManager : MonoBehaviour {
     public float effectVerticalOffset;
     public GameObject winEffect;
     public GameObject loseEffect;
+    public GameObject poofEffect;
 
     void Awake()
     {
@@ -40,6 +41,10 @@ public class AnimationManager : MonoBehaviour {
         Quaternion animationRotation = new Quaternion(gameCamera.transform.rotation.x, gameCamera.transform.rotation.y, 0.0f, gameCamera.transform.rotation.w);
         GameObject.Find("Canvas").SetActive(false);
         Instantiate(loseEffect, animationPosition, animationRotation);
+    }
 
+    public void PlayPoofEffect(Vector3 position, Quaternion rotation)
+    {
+        Instantiate(poofEffect, position, rotation);
     }
 }

@@ -13,7 +13,8 @@ public static class Constants {
     public const string LevelTwo = "level2";
     public const string LevelThree = "level3";
     public const string LevelFour = "Level4";
-    public const string EndGame = "EndGame";
+    public const string LevelFive = "Level5";
+    public const string EndScreen = "EndScreen";
 
     //other cross-class constants
     public const float WaitAfterDeath = 5f;
