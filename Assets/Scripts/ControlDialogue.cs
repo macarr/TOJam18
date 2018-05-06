@@ -63,7 +63,7 @@ public class ControlDialogue : MonoBehaviour {
         dialogueIndex = 0;
         spriteIndex = 0;
 
-        updateInterval = 0.15f;
+        //updateInterval = 0.15f;
 		
 	}
 	
@@ -90,6 +90,8 @@ public class ControlDialogue : MonoBehaviour {
 
     public void newDialogue(string newCharacter, string newText)
     {
+        updateTimer = 0;
+
         aButtonDisplay.SetActive(false);
 
         master.SetActive(true);
