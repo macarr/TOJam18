@@ -93,6 +93,7 @@
     <Compile Include="Assets\Scripts\AnimateIn.cs" />
     <Compile Include="Assets\Scripts\AnyButton.cs" />
     <Compile Include="Assets\Scripts\AssignDialogue.cs" />
+    <Compile Include="Assets\Scripts\AssignRandomSprite.cs" />
     <Compile Include="Assets\Scripts\AssignSpriteBasedOnDirectoin.cs" />
     <Compile Include="Assets\Scripts\BobUpAndDown.cs" />
     <Compile Include="Assets\Scripts\Constants.cs" />
