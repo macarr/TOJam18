@@ -23,7 +23,7 @@ public class FollowPlayer : MonoBehaviour {
 
         if (leadSkeleton == null)
         {
-            leadSkeleton = GameObject.Find("Skeleton");
+            leadSkeleton = GameObject.Find(Constants.Skeleton);
         }
 		
 	}

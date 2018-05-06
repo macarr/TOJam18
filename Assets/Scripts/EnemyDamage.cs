@@ -10,8 +10,8 @@ public class EnemyDamage : MonoBehaviour
     // Use this for initialization
     void Awake ()
     {
-        levelManager = GameObject.Find("LevelManager");
-        animationManager = GameObject.Find("AnimationManager");
+        levelManager = GameObject.Find(Constants.LevelManager);
+        animationManager = GameObject.Find(Constants.AnimationManager);
     }
 
     public void LoseLevel()
