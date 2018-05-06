@@ -1142,9 +1142,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayToLoadLevel: 4.5
-  winEffect: {fileID: 1427571449272300, guid: b2092971662376b44a39dccbb3ac83fc, type: 2}
-  winEffectDistanceFromCamera: 10
-  winEffectVerticalOffset: -2
 --- !u!1 &1401835002
 GameObject:
   m_ObjectHideFlags: 0
@@ -1862,6 +1859,55 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339969272834612, guid: 614b7514e06d23c4e87f97e39e19b440, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224437366031572736, guid: 614b7514e06d23c4e87f97e39e19b440,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224437366031572736, guid: 614b7514e06d23c4e87f97e39e19b440,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224437366031572736, guid: 614b7514e06d23c4e87f97e39e19b440,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 450
+      objectReference: {fileID: 0}
+    - target: {fileID: 224437366031572736, guid: 614b7514e06d23c4e87f97e39e19b440,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 224437366031572736, guid: 614b7514e06d23c4e87f97e39e19b440,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 224437366031572736, guid: 614b7514e06d23c4e87f97e39e19b440,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224437366031572736, guid: 614b7514e06d23c4e87f97e39e19b440,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224437366031572736, guid: 614b7514e06d23c4e87f97e39e19b440,
+        type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224437366031572736, guid: 614b7514e06d23c4e87f97e39e19b440,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 614b7514e06d23c4e87f97e39e19b440, type: 2}
