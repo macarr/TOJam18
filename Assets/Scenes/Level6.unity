@@ -947,6 +947,28 @@ Prefab:
       propertyPath: m_Name
       value: Gravestone 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 212556625131490108, guid: d89498833a5aa3a418b0279611b7719e,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2840ea91cbfc8eb45ae9e453acd27635,
+        type: 3}
+    - target: {fileID: 4894342002617718, guid: d89498833a5aa3a418b0279611b7719e, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.5710709
+      objectReference: {fileID: 0}
+    - target: {fileID: 4894342002617718, guid: d89498833a5aa3a418b0279611b7719e, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.5710709
+      objectReference: {fileID: 0}
+    - target: {fileID: 4894342002617718, guid: d89498833a5aa3a418b0279611b7719e, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.5710709
+      objectReference: {fileID: 0}
+    - target: {fileID: 4894342002617718, guid: d89498833a5aa3a418b0279611b7719e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.9999999
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d89498833a5aa3a418b0279611b7719e, type: 2}
   m_IsPrefabParent: 0
@@ -2137,6 +2159,28 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4449330988468940, guid: d89498833a5aa3a418b0279611b7719e, type: 2}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212556625131490108, guid: d89498833a5aa3a418b0279611b7719e,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2840ea91cbfc8eb45ae9e453acd27635,
+        type: 3}
+    - target: {fileID: 4894342002617718, guid: d89498833a5aa3a418b0279611b7719e, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.5710709
+      objectReference: {fileID: 0}
+    - target: {fileID: 4894342002617718, guid: d89498833a5aa3a418b0279611b7719e, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.5710709
+      objectReference: {fileID: 0}
+    - target: {fileID: 4894342002617718, guid: d89498833a5aa3a418b0279611b7719e, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.5710709
+      objectReference: {fileID: 0}
+    - target: {fileID: 4894342002617718, guid: d89498833a5aa3a418b0279611b7719e, type: 2}
+      propertyPath: m_LocalPosition.y
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
