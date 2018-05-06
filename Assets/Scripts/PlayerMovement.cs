@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject inFrontSkeleton;
     public GameObject behindSkeleton;
+    public GameObject bonkEffect;
 
     // Use this for initialization
     void Start()
@@ -88,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
         if (Vector3.Distance(inFrontSkeleton.transform.position, transform.position) > followDistance ||
-            !inFrontSkeleton.active)
+            !inFrontSkeleton.activeInHierarchy)
         {
             //transform.LookAt(inFrontSkeleton.GetComponent<PlayerMovementForward>().previousPosition);
             transform.LookAt(inFrontSkeleton.transform.position);
@@ -126,10 +127,6 @@ public class PlayerMovement : MonoBehaviour
         {
             bounceVector.y = 0;
             transform.rotation = Quaternion.FromToRotation(transform.right, bounceVector);
-            if(transform.rotation.z > 0 || transform.rotation.x > 0)
-            {
-                Debug.Log("heck");
-            }
         }
     }
 
@@ -140,8 +137,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Vector3 incomingVector = hit.point - transform.position;
             Vector3 reflectVec = Vector3.Reflect(incomingVector, hit.normal);
-            Debug.DrawLine(transform.position, hit.point, Color.red, 1f);
-            Debug.DrawRay(hit.point, reflectVec, Color.green);
+            Instantiate(bonkEffect, hit.point, Quaternion.identity);
             return reflectVec;
         }
         return Vector3.zero;

@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114175083511348770}
   - component: {fileID: 54286135653711506}
   - component: {fileID: 114144086945630996}
+  - component: {fileID: 114591117380100510}
   m_Layer: 2
   m_Name: Skeleton (3)
   m_TagString: Skeleton
@@ -252,6 +253,7 @@ GameObject:
   - component: {fileID: 114392013291538038}
   - component: {fileID: 54489142588346668}
   - component: {fileID: 114811750213314154}
+  - component: {fileID: 114510928560322612}
   m_Layer: 2
   m_Name: Skeleton (5)
   m_TagString: Skeleton
@@ -288,6 +290,7 @@ GameObject:
   - component: {fileID: 114784656462044852}
   - component: {fileID: 54215571781104080}
   - component: {fileID: 114398765582820218}
+  - component: {fileID: 114327977475574700}
   m_Layer: 2
   m_Name: Skeleton (4)
   m_TagString: Skeleton
@@ -328,6 +331,7 @@ GameObject:
   - component: {fileID: 114403091180301208}
   - component: {fileID: 54902670109172386}
   - component: {fileID: 114850301228586720}
+  - component: {fileID: 114799064205909864}
   m_Layer: 2
   m_Name: Skeleton (2)
   m_TagString: Skeleton
@@ -1285,6 +1289,7 @@ MonoBehaviour:
   bobTween: 0
   bobSpeed: 0.1
   offset: 0.4
+  scale: 1
   goingUp: 0
 --- !u!114 &114120114747034434
 MonoBehaviour:
@@ -1317,11 +1322,12 @@ MonoBehaviour:
   rotateSpeed: 160
   baseRotateSpeed: 0
   maxRotateSpeed: 320
-  bounceDist: 1.5
+  bounceDist: 1
   minimumMoveSeconds: 0.5
   followDistance: 1
   inFrontSkeleton: {fileID: 0}
   behindSkeleton: {fileID: 1491117371657252}
+  bonkEffect: {fileID: 1946141102166808, guid: b67a3c50c58e2dc418b7db8b2a2c713e, type: 2}
 --- !u!114 &114144086945630996
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1358,6 +1364,7 @@ MonoBehaviour:
   followDistance: 1
   inFrontSkeleton: {fileID: 1770984214458500}
   behindSkeleton: {fileID: 1684779072877524}
+  bonkEffect: {fileID: 0}
 --- !u!114 &114202262393793388
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1385,6 +1392,7 @@ MonoBehaviour:
   bobTween: 0
   bobSpeed: 0.1
   offset: 0.6
+  scale: 1
   goingUp: 0
 --- !u!114 &114209511330055756
 MonoBehaviour:
@@ -1413,6 +1421,7 @@ MonoBehaviour:
   bobTween: 0
   bobSpeed: 0.1
   offset: 0.8
+  scale: 1
   goingUp: 0
 --- !u!114 &114236186883951754
 MonoBehaviour:
@@ -1491,6 +1500,7 @@ MonoBehaviour:
   bobTween: 0.8
   bobSpeed: 0.1
   offset: 0
+  scale: 1
   goingUp: 0
 --- !u!114 &114318187123156978
 MonoBehaviour:
@@ -1498,6 +1508,18 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1491117371657252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75dfc8a24759e50439434c662a08d4d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poofEffect: {fileID: 1393534337390760, guid: e31a5a2df7204f04e997491710c8b950, type: 2}
+--- !u!114 &114327977475574700
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1684779072877524}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75dfc8a24759e50439434c662a08d4d5, type: 3}
@@ -1527,6 +1549,7 @@ MonoBehaviour:
   followDistance: 1
   inFrontSkeleton: {fileID: 1684779072877524}
   behindSkeleton: {fileID: 0}
+  bonkEffect: {fileID: 0}
 --- !u!114 &114398765582820218
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1563,6 +1586,7 @@ MonoBehaviour:
   followDistance: 1
   inFrontSkeleton: {fileID: 1491117371657252}
   behindSkeleton: {fileID: 1049756956347350}
+  bonkEffect: {fileID: 0}
 --- !u!114 &114458263104989030
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1663,6 +1687,30 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6a92d21f43ec23b448b09c9c082bd58c, type: 3}
   animCycleCounter: 0.3
   animCycleInterval: 0.15
+--- !u!114 &114510928560322612
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1520879499953282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75dfc8a24759e50439434c662a08d4d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poofEffect: {fileID: 1393534337390760, guid: e31a5a2df7204f04e997491710c8b950, type: 2}
+--- !u!114 &114591117380100510
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1049756956347350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75dfc8a24759e50439434c662a08d4d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poofEffect: {fileID: 1393534337390760, guid: e31a5a2df7204f04e997491710c8b950, type: 2}
 --- !u!114 &114634970502969624
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1875,6 +1923,19 @@ MonoBehaviour:
   followDistance: 1
   inFrontSkeleton: {fileID: 1049756956347350}
   behindSkeleton: {fileID: 1520879499953282}
+  bonkEffect: {fileID: 0}
+--- !u!114 &114799064205909864
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1770984214458500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75dfc8a24759e50439434c662a08d4d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poofEffect: {fileID: 1393534337390760, guid: e31a5a2df7204f04e997491710c8b950, type: 2}
 --- !u!114 &114799115655942400
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1898,6 +1959,7 @@ MonoBehaviour:
   followDistance: 1
   inFrontSkeleton: {fileID: 1989092921460770}
   behindSkeleton: {fileID: 1770984214458500}
+  bonkEffect: {fileID: 0}
 --- !u!114 &114811750213314154
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1925,6 +1987,7 @@ MonoBehaviour:
   bobTween: 0.15
   bobSpeed: 0.1
   offset: 0.2
+  scale: 1
   goingUp: 0
 --- !u!114 &114850301228586720
 MonoBehaviour:
@@ -1966,6 +2029,7 @@ MonoBehaviour:
   bobTween: 0
   bobSpeed: 0.1
   offset: 0
+  scale: 1
   goingUp: 0
 --- !u!114 &114940336483939514
 MonoBehaviour:
