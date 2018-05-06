@@ -110,6 +110,7 @@
     <Compile Include="Assets\Scripts\Parallax.cs" />
     <Compile Include="Assets\Scripts\PatrolMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\SeekPlayer.cs" />
     <Compile Include="Assets\Scripts\SpawnStarsOnClick.cs" />
     <Compile Include="Assets\Scripts\swapSpriteAfterTime.cs" />
     <Compile Include="Assets\Scripts\Unlocker.cs" />

@@ -3080,6 +3080,21 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114696270601595732, guid: 7f55bd0fa5753ab4080994ed2effa540,
+        type: 2}
+      propertyPath: newText.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114696270601595732, guid: 7f55bd0fa5753ab4080994ed2effa540,
+        type: 2}
+      propertyPath: charName.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114696270601595732, guid: 7f55bd0fa5753ab4080994ed2effa540,
+        type: 2}
+      propertyPath: moveMilestones.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4803924995430324, guid: 7f55bd0fa5753ab4080994ed2effa540, type: 2}
       propertyPath: m_LocalPosition.x
       value: -13.88
@@ -3115,17 +3130,17 @@ Prefab:
     - target: {fileID: 114696270601595732, guid: 7f55bd0fa5753ab4080994ed2effa540,
         type: 2}
       propertyPath: charName.Array.data[2]
-      value: Kyle
+      value: Bonebert
       objectReference: {fileID: 0}
     - target: {fileID: 114696270601595732, guid: 7f55bd0fa5753ab4080994ed2effa540,
         type: 2}
       propertyPath: newText.Array.data[2]
-      value: Hey guys, sorry to bother, but I think we're out of doritos.
+      value: Goat key? My boy, I dare say that's a ~skeleton key~!
       objectReference: {fileID: 0}
     - target: {fileID: 114696270601595732, guid: 7f55bd0fa5753ab4080994ed2effa540,
         type: 2}
       propertyPath: newText.Array.data[1]
-      value: M-Maybe that goat-looking thing can open it.
+      value: Maybe that goat key can open it.
       objectReference: {fileID: 0}
     - target: {fileID: 114696270601595732, guid: 7f55bd0fa5753ab4080994ed2effa540,
         type: 2}
@@ -3140,12 +3155,47 @@ Prefab:
     - target: {fileID: 114696270601595732, guid: 7f55bd0fa5753ab4080994ed2effa540,
         type: 2}
       propertyPath: moveMilestones.Array.data[1]
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114696270601595732, guid: 7f55bd0fa5753ab4080994ed2effa540,
         type: 2}
       propertyPath: moveMilestones.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114696270601595732, guid: 7f55bd0fa5753ab4080994ed2effa540,
+        type: 2}
+      propertyPath: newText.Array.data[3]
+      value: Bonebert, stop.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114696270601595732, guid: 7f55bd0fa5753ab4080994ed2effa540,
+        type: 2}
+      propertyPath: charName.Array.data[3]
+      value: Skullfred
+      objectReference: {fileID: 0}
+    - target: {fileID: 114696270601595732, guid: 7f55bd0fa5753ab4080994ed2effa540,
+        type: 2}
+      propertyPath: charName.Array.data[1]
+      value: Skullfred
+      objectReference: {fileID: 0}
+    - target: {fileID: 114696270601595732, guid: 7f55bd0fa5753ab4080994ed2effa540,
+        type: 2}
+      propertyPath: moveMilestones.Array.data[3]
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114696270601595732, guid: 7f55bd0fa5753ab4080994ed2effa540,
+        type: 2}
+      propertyPath: moveMilestones.Array.data[4]
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114696270601595732, guid: 7f55bd0fa5753ab4080994ed2effa540,
+        type: 2}
+      propertyPath: charName.Array.data[4]
+      value: Kyle
+      objectReference: {fileID: 0}
+    - target: {fileID: 114696270601595732, guid: 7f55bd0fa5753ab4080994ed2effa540,
+        type: 2}
+      propertyPath: newText.Array.data[4]
+      value: Hey guys, sorry to bother, but I think we're out of doritos.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f55bd0fa5753ab4080994ed2effa540, type: 2}

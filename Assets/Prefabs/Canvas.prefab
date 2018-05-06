@@ -496,7 +496,7 @@ MonoBehaviour:
   spriteIndex: 0
   dialogueIndex: 0
   updateTimer: 0
-  updateInterval: 0.025
+  updateInterval: 0.065
   dialogueFinished: 0
   imageRef: {fileID: 0}
 --- !u!114 &114791381415770794
