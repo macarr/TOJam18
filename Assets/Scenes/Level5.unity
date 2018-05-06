@@ -1073,7 +1073,7 @@ Prefab:
     - target: {fileID: 114696270601595732, guid: 7f55bd0fa5753ab4080994ed2effa540,
         type: 2}
       propertyPath: newText.Array.data[0]
-      value: Watch out for those throny roses.
+      value: Watch out for those thorny roses.
       objectReference: {fileID: 0}
     - target: {fileID: 114696270601595732, guid: 7f55bd0fa5753ab4080994ed2effa540,
         type: 2}
