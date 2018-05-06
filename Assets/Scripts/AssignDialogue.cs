@@ -47,7 +47,7 @@ public class AssignDialogue : MonoBehaviour {
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetButtonDown("Submit"))
         {
             dialogueOver = true;
         }

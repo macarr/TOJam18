@@ -79,7 +79,7 @@ public class ControlDialogue : MonoBehaviour {
 
         updateDialogue();
         
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetButtonDown("Submit"))
         {
             dialogueFinished = true;
             aButtonDisplay.SetActive(false);
