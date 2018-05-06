@@ -55,3 +55,4 @@ MonoBehaviour:
   effectVerticalOffset: -2
   winEffect: {fileID: 1427571449272300, guid: b2092971662376b44a39dccbb3ac83fc, type: 2}
   loseEffect: {fileID: 1316048568805494, guid: 733d2abcccf90884a8fd8564d3b4a21d, type: 2}
+  poofEffect: {fileID: 1393534337390760, guid: e31a5a2df7204f04e997491710c8b950, type: 2}
