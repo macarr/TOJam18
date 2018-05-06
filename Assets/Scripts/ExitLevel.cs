@@ -7,9 +7,6 @@ public class ExitLevel : MonoBehaviour {
 
     GameObject levelManager;
     GameObject animationManager;
-    public GameObject winEffect;
-    public float winEffectDistanceFromCamera = 10f;
-    public float winEffectVerticalOffset = -2f;
     private bool initiated = false;
 
     private void Awake()
