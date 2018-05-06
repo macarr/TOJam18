@@ -96,7 +96,9 @@
     <Compile Include="Assets\Scripts\Constants.cs" />
     <Compile Include="Assets\Scripts\ControlDialogue.cs" />
     <Compile Include="Assets\Scripts\DetermineDirection.cs" />
+    <Compile Include="Assets\Scripts\EnemyDamage.cs" />
     <Compile Include="Assets\Scripts\ExitLevel.cs" />
+    <Compile Include="Assets\Scripts\FireDamage.cs" />
     <Compile Include="Assets\Scripts\FollowPlayer.cs" />
     <Compile Include="Assets\Scripts\Interactions.cs" />
     <Compile Include="Assets\Scripts\KillAfterTime.cs" />
@@ -104,7 +106,7 @@
     <Compile Include="Assets\Scripts\LookAtCamera.cs" />
     <Compile Include="Assets\Scripts\OpenGate.cs" />
     <Compile Include="Assets\Scripts\Parallax.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovementForward.cs" />
+    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\SpawnStarsOnClick.cs" />
     <Compile Include="Assets\Scripts\Unlocker.cs" />
   </ItemGroup>
