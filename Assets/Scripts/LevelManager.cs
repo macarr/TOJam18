@@ -14,7 +14,8 @@ public class LevelManager : MonoBehaviour {
         Constants.LevelTwo,
         Constants.LevelThree,
         Constants.LevelFour,
-        Constants.EndGame,
+        Constants.LevelFive,
+        Constants.EndScreen,
     };
 
     void Awake()
@@ -60,14 +61,14 @@ public class LevelManager : MonoBehaviour {
         currentLevel++;
         if(currentLevel >= levelOrder.Length)
         {
-            Debug.Log("overran levels array, loading endScreen");
-            currentLevel = levelOrder.Length - 1;
+            Debug.Log("Ran off end of the array, assuming we were on the end screen and want to restart");
+            currentLevel = 1;
         } 
         else
         {
             Debug.Log("Loading next level");
-            loadLevel(levelOrder[currentLevel]);
         }
+        loadLevel(levelOrder[currentLevel]);
     }
 
     void loadLevel(string levelName)
