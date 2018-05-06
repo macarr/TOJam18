@@ -10,6 +10,8 @@ public class AssignDialogue : MonoBehaviour {
     public float moveCounter;
     public int dialogueIndex;
 
+    public bool dialogueOver;
+
 
     public float[] moveMilestones;
     public string[] charName;
@@ -21,11 +23,13 @@ public class AssignDialogue : MonoBehaviour {
     {
         Debug.Log("test");
         masterCanvas = GameObject.Find("Canvas");
+
+        dialogueOver = true;
     }
 
     void Update()
     {
-        if (Input.GetAxis("Horizontal") > 0.8 || Input.GetAxis("Horizontal") < -0.8)
+        if ((Input.GetAxis("Horizontal") > 0.8 || Input.GetAxis("Horizontal") < -0.8) && dialogueOver)
         {
             moveCounter += Time.deltaTime;
             // increaseSpeedOnConstantSpin(2);
@@ -33,6 +37,7 @@ public class AssignDialogue : MonoBehaviour {
 
         if (moveCounter >= moveMilestones[dialogueIndex])
         {
+            dialogueOver = false;
             masterCanvas.GetComponent<ControlDialogue>().newDialogue(charName[dialogueIndex], newText[dialogueIndex]);
             dialogueIndex++;
 
@@ -42,6 +47,10 @@ public class AssignDialogue : MonoBehaviour {
             }
         }
 
+        if (Input.GetButtonDown("Submit"))
+        {
+            dialogueOver = true;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
