@@ -16,6 +16,9 @@ public class ControlDialogue : MonoBehaviour {
     public GameObject textField;
     public GameObject master;
 
+    public GameObject aButtonDisplay;
+
+
     public GameObject skullSprite;
     public GameObject skullEyeSprite;
 
@@ -75,11 +78,19 @@ public class ControlDialogue : MonoBehaviour {
        */
 
         updateDialogue();
-		
-	}
+        
+        if (Input.GetKey(KeyCode.S))
+        {
+            dialogueFinished = true;
+            aButtonDisplay.SetActive(false);
+            master.SetActive(false);
+        }
+
+    }
 
     public void newDialogue(string newCharacter, string newText)
     {
+        aButtonDisplay.SetActive(false);
 
         master.SetActive(true);
         dialogueFinished = false;
@@ -99,7 +110,10 @@ public class ControlDialogue : MonoBehaviour {
 
     void updateDialogue()
     {
-        updateTimer += Time.deltaTime;
+        if (dialogueFinished == false)
+        {
+            updateTimer += Time.deltaTime;
+        }
 
        // updateTimer += 0.01f;
 
@@ -129,15 +143,15 @@ public class ControlDialogue : MonoBehaviour {
                 {
                     GameObject.Find("SkullEyes").GetComponent<Image>().sprite = character3Sprites[1];
                 }
+                if (characterName.Contains("Kyle"))
+                {
+                    GameObject.Find("SkullEyes").GetComponent<Image>().sprite = character3Sprites[3];
+                }
                 if (characterName.Contains("Bonesly"))
                 {
                     GameObject.Find("SkullEyes").GetComponent<Image>().sprite = character3Sprites[2];
                     GameObject.Find("SkullSprite").GetComponent<Image>().sprite = character2Sprites[spriteIndex % character2Sprites.Length];
 
-                }
-                else if (characterName.Contains("Kyle"))
-                {
-                    GameObject.Find("SkullEyes").GetComponent<Image>().sprite = character3Sprites[3];
                 }
                 else
                 {
@@ -150,11 +164,13 @@ public class ControlDialogue : MonoBehaviour {
 
                 updateTimer -= updateInterval;
             }
-            else if (updateTimer >= (updateInterval*15 + 2.0f))
+            else if(updateTimer >= (updateInterval * 2))
+            {
+                aButtonDisplay.SetActive(true);
+            }
+            else if (updateTimer >= (updateInterval*15 +20.0f))
             {
                 master.SetActive(false);
-                dialogueFinished = true;
-
             }
         }
 
