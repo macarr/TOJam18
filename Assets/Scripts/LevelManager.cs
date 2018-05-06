@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour {
     private int currentLevel = 0;
     private string[] levelOrder = new string[]
     {
+        Constants.Title,
         Constants.LevelOne,
         Constants.LevelTwo,
         Constants.LevelThree,
