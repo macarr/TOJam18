@@ -1141,7 +1141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5a144f76fa20c84d9585bcf8194ce32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayToLoadLevel: 2
+  delayToLoadLevel: 3.5
   winEffect: {fileID: 1427571449272300, guid: b2092971662376b44a39dccbb3ac83fc, type: 2}
   winEffectDistanceFromCamera: 10
   winEffectVerticalOffset: -2

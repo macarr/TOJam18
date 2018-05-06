@@ -1522,8 +1522,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5a144f76fa20c84d9585bcf8194ce32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayToLoadLevel: 2
-  poofEffect: {fileID: 1393534337390760, guid: e31a5a2df7204f04e997491710c8b950, type: 2}
+  delayToLoadLevel: 3.5
+  winEffect: {fileID: 1427571449272300, guid: b2092971662376b44a39dccbb3ac83fc, type: 2}
+  winEffectDistanceFromCamera: 10
+  winEffectVerticalOffset: -2
 --- !u!1 &1172906439
 GameObject:
   m_ObjectHideFlags: 0
