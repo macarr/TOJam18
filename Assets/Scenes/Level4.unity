@@ -742,7 +742,7 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b858b5f90698f4749be15c3e9280e1ec, type: 2}
+      objectReference: {fileID: 2100000, guid: 7da9bd3c2a0bc38488e683445ff70539, type: 2}
     - target: {fileID: 1788190814955008, guid: 3003eaae7cb55c34699c3875da60f2f4, type: 2}
       propertyPath: m_Layer
       value: 2
@@ -1219,12 +1219,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1e052b86d3fdee241b08b1e159e6214c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e4dd1f6216c7b1847a7cacfece5d38b6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.55, y: 2.38}
+  m_Size: {x: 1.86, y: 1.29}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1734,12 +1734,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: be2723ae9e781db41b9a142f2f4aacdc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9c5e3075c990cd745b6dc739f32b4613, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.55, y: 2.38}
+  m_Size: {x: 1.87, y: 1.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1826,7 +1826,7 @@ GameObject:
   - component: {fileID: 1567260818}
   - component: {fileID: 1567260817}
   m_Layer: 0
-  m_Name: Webbo (2)
+  m_Name: web
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1890,12 +1890,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 72b28771c64d22e4c92d142ee821171b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d9f8a1cd0c6c4dd4596847b0b567f020, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.55, y: 2.38}
+  m_Size: {x: 1.24, y: 1.35}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
