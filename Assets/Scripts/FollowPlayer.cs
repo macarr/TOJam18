@@ -61,4 +61,9 @@ public class FollowPlayer : MonoBehaviour {
             }
         }
     }
+
+    public void StopFollowing()
+    {
+        Destroy(this);
+    }
 }

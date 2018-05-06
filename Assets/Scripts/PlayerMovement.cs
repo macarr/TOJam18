@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class PlayerMovementForward : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
 
     public int previousDirection;
@@ -87,7 +87,8 @@ public class PlayerMovementForward : MonoBehaviour
             Debug.LogError("Follower movement called by player :(");
             return;
         }
-        if (Vector3.Distance(inFrontSkeleton.transform.position, transform.position) > followDistance)
+        if (Vector3.Distance(inFrontSkeleton.transform.position, transform.position) > followDistance ||
+            !inFrontSkeleton.active)
         {
             //transform.LookAt(inFrontSkeleton.GetComponent<PlayerMovementForward>().previousPosition);
             transform.LookAt(inFrontSkeleton.transform.position);
@@ -146,13 +147,6 @@ public class PlayerMovementForward : MonoBehaviour
         return Vector3.zero;
     }
 
-
-    /*public IEnumerator RecordPositionLater()
-    {
-        yield return new WaitForSeconds(1f);
-        previousPosition = transform.position;
-    }*/
-
     void increaseSpeedOnConstantSpin(int direction)
     {
         if (direction == previousDirection)
@@ -175,6 +169,16 @@ public class PlayerMovementForward : MonoBehaviour
             rotateSpeed = baseRotateSpeed;
         }
         previousDirection = direction;
+    }
+
+    public void Explode()
+    {
+        transform.Rotate(new Vector3(Random.Range(-45f, -135f), Random.Range(0f, 360f), 0));
+        GetComponent<Rigidbody>().AddForce(transform.forward * 25, ForceMode.VelocityChange);
+        if(behindSkeleton != null)
+        {
+            behindSkeleton.GetComponent<PlayerMovement>().Explode();
+        }
     }
 }
 
