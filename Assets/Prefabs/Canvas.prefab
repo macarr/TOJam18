@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 81629640537379562}
   - component: {fileID: 82297603583197026}
   m_Layer: 5
-  m_Name: CanvasPrefab
+  m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,7 +46,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1440900626415200
 GameObject:
   m_ObjectHideFlags: 1
