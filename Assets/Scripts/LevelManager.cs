@@ -9,11 +9,10 @@ public class LevelManager : MonoBehaviour {
     private int currentLevel = 0;
     private string[] levelOrder = new string[]
     {
-        Constants.StartScreen,
         Constants.LevelOne,
         Constants.LevelTwo,
         Constants.LevelThree,
-        Constants.EndGameScreen,
+        Constants.EndGame,
     };
 
     void Awake()
@@ -26,6 +25,12 @@ public class LevelManager : MonoBehaviour {
         if (_instance != gameObject)
             Destroy(gameObject);
 
+    }
+
+    public void resetLevel()
+    {
+        Debug.Log("Reloading current level");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void nextLevel()
@@ -45,7 +50,7 @@ public class LevelManager : MonoBehaviour {
 
     void loadLevel(string levelName)
     {
-        Debug.Log(string.Format("Loading level %s", levelName));
+        Debug.Log(string.Format("Loading level {0}", levelName));
         SceneManager.LoadScene(levelName);
     }
 }

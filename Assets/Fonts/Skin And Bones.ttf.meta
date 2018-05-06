@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 8c88b27f22731a843981ef337f178bf6
+timeCreated: 1525554049
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Skin And Bones
+  fontNames:
+  - Skin And Bones
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
