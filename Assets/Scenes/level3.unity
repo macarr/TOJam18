@@ -866,7 +866,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4803924995430324, guid: 7f55bd0fa5753ab4080994ed2effa540, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -6.5776634
+      value: -13.44
       objectReference: {fileID: 0}
     - target: {fileID: 4803924995430324, guid: 7f55bd0fa5753ab4080994ed2effa540, type: 2}
       propertyPath: m_LocalPosition.y
@@ -939,7 +939,7 @@ Prefab:
     - target: {fileID: 114696270601595732, guid: 7f55bd0fa5753ab4080994ed2effa540,
         type: 2}
       propertyPath: moveMilestones.Array.data[0]
-      value: 0.01
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114696270601595732, guid: 7f55bd0fa5753ab4080994ed2effa540,
         type: 2}
@@ -1229,9 +1229,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayToLoadLevel: 4.5
-  winEffect: {fileID: 1427571449272300, guid: b2092971662376b44a39dccbb3ac83fc, type: 2}
-  winEffectDistanceFromCamera: 10
-  winEffectVerticalOffset: -2
 --- !u!1 &1188276446 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1256508887318200, guid: 7960a0bc789e09545a6fb728f38d36ff,

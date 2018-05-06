@@ -90,6 +90,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BGMSource.cs" />
     <Compile Include="Assets\Scripts\AnimateIn.cs" />
     <Compile Include="Assets\Scripts\AnimationManager.cs" />
     <Compile Include="Assets\Scripts\AnyButton.cs" />
