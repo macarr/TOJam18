@@ -18,6 +18,10 @@ public class PatrolMovement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         startPos = gameObject.transform.position;
+        if(path == Path.Horizontal)
+        {
+            transform.Rotate(0, 90, 0);
+        }
 	}
 	
 	// Update is called once per frame
